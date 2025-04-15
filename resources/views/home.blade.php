@@ -12,9 +12,9 @@
 
 <body>
     @include('components.navbar')
-    <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover lg:h-90 xl:h-150"
+    <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover lg:h-100 xl:h-150"
         style="background-image: url('{{ asset('storage/images/banner1.jpg') }}')">
-        <div class="px-4 max-w-screen-xl text-left py-24 lg:py-20 lg:mx-10 xl:py-70">
+        <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl ">Gua Pawon: Warisan Sejarah,
                 Jejak Peradaban</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">Temukan kisah manusia purba yang pernah hidup
@@ -23,8 +23,8 @@
         </div>
     </section>
 
-    <div class="container mx-auto">
-        <article class="text-justify text-sm py-5 mx-10 xl:text-xl">
+    <div class="container mx-auto text-base">
+        <article class="text-justify py-5 mx-10">
             <p>
                 Gua Pawon adalah sebuah gua alami dan situs purbakala yang terletak di Desa Gunung Masigit, Kecamatan
                 Cipatat, Kabupaten
@@ -67,7 +67,7 @@
         </div>
 
 
-        <article class="text-justify text-sm py-5 mx-10 xl:text-xl">
+        <article class="text-justify text-sm py-5 mx-10 xl:text-xl lg:text-base">
             <p>
                 Gua dengan ketinggian 709 Mdpl ini memiliki luas 38×16 meter. Hingga sekarang, gua ini masih terjaga
                 dengan baik, bahkan
@@ -160,7 +160,7 @@
                 <h2 class="text-2xl font-semibold text-gray-900">
                     <span class="text-yellow-600 font-bold">▍</span> Gua Pawon Tour
                 </h2>
-                <p class="text-gray-700 text-justify">
+                <p class="text-gray-700 text-justify text-base">
                     Selamat datang di Gua Pawon, situs bersejarah yang menyimpan jejak kehidupan manusia purba di
                     Bandung Barat.
                     Dalam video tour ini, kita akan menelusuri keindahan alam serta peninggalan arkeologi yang
@@ -285,7 +285,7 @@
                 </h2>
                 <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
                     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Untuk mencapai Goa Pawon, Anda bisa berkendara
+                        <p class="mb-2 text-black">Untuk mencapai Goa Pawon, Anda bisa berkendara
                             dari
                             pusat kota Cianjur atau menggunakan transportasi umum. Perjalanan memakan waktu sekitar satu
                             jam,
