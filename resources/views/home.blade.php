@@ -56,12 +56,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
             <div class="md:col-span-2 relative overflow-hidden rounded-sm shadow-lg group h-64 md:h-96">
-                <img src="{{ Vite::asset('resources/img/image 14.png') }}" alt="Gua"
+                <img src="{{ asset('img/image 14.png') }}" alt="Gua"
                     class="w-full h-full object-cover transition duration-300 ease-in transform group-hover:scale-110">
             </div>
 
             <div class="md:col-span-1 relative overflow-hidden rounded-sm shadow-lg group h-64 md:h-96">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Gua"
+                <img src="{{ asset('img/image 12.png') }}" alt="Gua"
                     class="w-full h-full object-cover transition duration-300 ease-in transform group-hover:scale-110">
             </div>
         </div>
@@ -95,7 +95,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
             <div class="relative overflow-hidden rounded shadow-lg group">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Sejarah"
+                <img src="{{ asset('img/image 12.png') }}" alt="Sejarah"
                     class="w-full h-48 object-cover">
                 <a href="/history"
                     class="bg-[#2A1B0F] text-white flex items-center justify-between px-4 py-2 hover:bg-[#3a2919] transition">
@@ -105,7 +105,7 @@
             </div>
 
             <div class="relative overflow-hidden rounded shadow-lg group">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Ekologi & Geologi"
+                <img src="{{ asset('img/image 12.png') }}" alt="Ekologi & Geologi"
                     class="w-full h-48 object-cover">
                 <a href="/ekologi-geologi"
                     class="bg-[#2A1B0F] text-white flex items-center justify-between px-4 py-2 hover:bg-[#3a2919] transition">
@@ -115,7 +115,7 @@
             </div>
 
             <div class="relative overflow-hidden rounded shadow-lg group">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Upaya konservasi"
+                <img src="{{ asset('img/image 12.png') }}" alt="Upaya konservasi"
                     class="w-full h-48 object-cover">
                 <a href="/konservasi"
                     class="bg-[#2A1B0F] text-white flex items-center justify-between px-4 py-2 hover:bg-[#3a2919] transition">
@@ -125,7 +125,7 @@
             </div>
 
             <div class="relative overflow-hidden rounded shadow-lg group">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Penelitian"
+                <img src="{{ asset('img/image 12.png') }}" alt="Penelitian"
                     class="w-full h-48 object-cover">
                 <a href="/penelitian"
                     class="bg-[#2A1B0F] text-white flex items-center justify-between px-4 py-2 hover:bg-[#3a2919] transition">
@@ -135,7 +135,7 @@
             </div>
 
             <div class="relative overflow-hidden rounded shadow-lg group">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Artikel"
+                <img src="{{ asset('img/image 12.png') }}" alt="Artikel"
                     class="w-full h-48 object-cover">
                 <a href="/artikel"
                     class="bg-[#2A1B0F] text-white flex items-center justify-between px-4 py-2 hover:bg-[#3a2919] transition">
@@ -145,7 +145,7 @@
             </div>
 
             <div class="relative overflow-hidden rounded shadow-lg group">
-                <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Kontak dan Lokasi"
+                <img src="{{ asset('img/image 12.png') }}" alt="Kontak dan Lokasi"
                     class="w-full h-48 object-cover">
                 <a href="/kontak-lokasi"
                     class="bg-[#2A1B0F] text-white flex items-center justify-between px-4 py-2 hover:bg-[#3a2919] transition">
