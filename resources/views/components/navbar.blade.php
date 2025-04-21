@@ -1,7 +1,7 @@
 <nav class="z-10 backdrop-blur-md border-b border-gray-100 lg:fixed w-full">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="{{ Vite::asset('resources/img/Asset 11.png') }}" class="h-8" alt="Flowbite Logo" />
+            <img src="{{ asset('img/Asset 11.png') }}" class="h-8" alt="Flowbite Logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-[8A8A8A]">Gua Pawon</span>
         </a>
         <button data-collapse-toggle="navbar-multi-level" type="button"

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
-    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/img/Asset 11.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/Asset 11.png') }}">
     <title>Gua Pawon</title>
 
 </head>
