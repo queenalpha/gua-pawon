@@ -157,9 +157,11 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
             <div class="space-y-4 px-4">
-                <h2 class="text-2xl font-semibold text-gray-900">
-                    <span class="text-yellow-600 font-bold">▍</span> Gua Pawon Tour
-                </h2>
+                <div class="border-[#D8CC6C] border-l-[5px] pl-5">
+                    <h2 class="text-dark mb-2 text-2xl font-semibold ">
+                        Gua Pawon Tour
+                    </h2>
+                </div>
                 <p class="text-gray-700 text-justify text-base">
                     Selamat datang di Gua Pawon, situs bersejarah yang menyimpan jejak kehidupan manusia purba di
                     Bandung Barat.
@@ -188,7 +190,7 @@
         <div class="space-y-6 my-10 px-4">
             <section class="dark:bg-dark bg-white">
                 <div class="mx-auto px-4 sm:container">
-                    <div class="border-primary border-l-[5px] pl-5">
+                    <div class="border-[#D8CC6C] border-l-[5px] pl-5">
                         <h2 class="text-dark mb-2 text-2xl font-semibold ">
                             3D Preview
                         </h2>
@@ -202,11 +204,12 @@
                         Dengan 3D preview ini, sejarah dan keindahan.
                     </p>
                 </div>
-            </section>    
+            </section>
             <div class="relative w-full overflow-hidden rounded-lg shadow-lg">
                 <div class="aspect-video w-full">
-                    <iframe title="The Cave Windows of Pawon Cave" frameborder="0" allowfullscreen mozallowfullscreen="true"
-                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                    <iframe title="The Cave Windows of Pawon Cave" frameborder="0" allowfullscreen
+                        mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
                         execution-while-out-of-viewport execution-while-not-rendered web-share
                         src="https://sketchfab.com/models/5c47ee6cb7184f6ca82cbc8945432c65/embed"
                         class="w-full h-full rounded-md"></iframe>
@@ -214,141 +217,9 @@
             </div>
         </div>
 
-        <div class="mx-auto my-10">
-            <h2 class="text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
-            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white text-gray-900"
-                data-inactive-classes="text-gray-500 dark:text-gray-400">
-                <h2 id="accordion-flush-heading-1">
-                    <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
-                        data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
-                        aria-controls="accordion-flush-body-1">
-                        <span>Apa itu Goa Pawon dan dimana lokasinya ?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Goa Pawon adalah gua prasejarah yang terletak
-                            di daerah
-                            Gunung Padang, dekat Cianjur, Jawa Barat. Goa ini dikenal karena signifikansi arkeologisnya,
-                            dengan
-                            bukti keberadaan manusia purba di dalamnya.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Terletak di Pegunungan Karst, Goa Pawon merupakan
-                            destinasi populer bagi mereka yang tertarik dengan sejarah dan arkeologi.</p>
-                    </div>
-                </div>
-
-                <h2 id="accordion-flush-heading-2">
-                    <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
-                        data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
-                        aria-controls="accordion-flush-body-2">
-                        <span>Apa keunikan atau daya tarik utama dari Goa Pawon?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Goa Pawon terkenal dengan artefak purbanya,
-                            termasuk
-                            alat-alat, tembikar, dan tulang binatang, yang memberikan wawasan tentang kehidupan
-                            prasejarah di
-                            Jawa.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Pengunjung terpikat oleh misteri dan nilai
-                            sejarahnya,
-                            dengan
-                            penggalian arkeologi yang masih berlangsung di area tersebut.</p>
-                    </div>
-                </div>
-
-                <h2 id="accordion-flush-heading-3">
-                    <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
-                        data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
-                        aria-controls="accordion-flush-body-3">
-                        <span>Bagaimana cara menuju ke Goa Pawon?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-black">Untuk mencapai Goa Pawon, Anda bisa berkendara
-                            dari
-                            pusat kota Cianjur atau menggunakan transportasi umum. Perjalanan memakan waktu sekitar satu
-                            jam,
-                            tergantung pada lalu lintas.</p>
-                        <p class="text-gray-500 dark:text-gray-400">Setibanya di kaki gunung, Anda perlu sedikit
-                            berjalan
-                            kaki
-                            menuju gua.</p>
-                    </div>
-                </div>
-
-                <h2 id="accordion-flush-heading-4">
-                    <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
-                        data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
-                        aria-controls="accordion-flush-body-4">
-                        <span>Apakah ada biaya masuk untuk mengunjungi Goa Pawon?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-                    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Saat ini, tidak ada biaya masuk yang signifikan
-                            untuk
-                            mengunjungi Goa Pawon. Namun, sumbangan sangat dihargai untuk membantu pemeliharaan situs
-                            ini.</p>
-                    </div>
-                </div>
-
-                <h2 id="accordion-flush-heading-5">
-                    <button type="button"
-                        class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
-                        data-accordion-target="#accordion-flush-body-5" aria-expanded="false"
-                        aria-controls="accordion-flush-body-5">
-                        <span>Bagaimana kondisi jalur menuju Goa Pawon?</span>
-                        <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 5 5 1 1 5" />
-                        </svg>
-                    </button>
-                </h2>
-                <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-                    <div class="py-5">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">Jalur menuju Goa Pawon relatif mudah dilalui,
-                            meski
-                            bisa
-                            licin pada musim hujan. Disarankan untuk mengenakan sepatu yang kuat dan berhati-hati.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('components.faq')
 
     </div>
-
-
-    {{-- Navbar and Hero --}}
-    {{-- Text --}}
-
 </body>
 @include('components.footer')
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
