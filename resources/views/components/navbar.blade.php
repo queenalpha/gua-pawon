@@ -1,4 +1,4 @@
-<nav class="z-10 border-b bg-white lg:fixed w-full">
+<nav class="z-50 border-b bg-white lg:fixed w-full">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ Vite::asset('resources/img/Logo-pawon.png') }}" class="h-8" alt="Logo Gua Pawon" />
@@ -87,7 +87,7 @@
 </nav>
 
 <div id="drawer-right-example"
-    class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80"
+    class="fixed top-0 right-0 z-60 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80"
     tabindex="-1" aria-labelledby="drawer-right-label">
 
     <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example"
@@ -100,14 +100,21 @@
     </button>
 
     <div class="mt-10 space-y-6">
-        <a href="/sejarah" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
+        <a href="/" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
+            <span class="text-lg font-medium group-hover:text-blue-700">Beranda</span>
+            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </a>
+        <a href="/history" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
             <span class="text-lg font-medium group-hover:text-blue-700">Sejarah</span>
             <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
-        <a href="/ekologi-geologi" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
+        <a href="/ecology" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
             <span class="text-lg font-medium group-hover:text-blue-700">Ekologi & Geologi</span>
             <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
