@@ -1,29 +1,46 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
 
-use Illuminate\Http\Request;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
-class newsController extends Controller
+class RefreshRSSResults extends Command
 {
-    
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'app:refresh-r-s-s-results';
 
-    public function index()
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Command description';
+
+    /**
+     * Execute the console command.
+     */
+    public function handle()
     {
         $apiKey = config('services.google.api_key');
         $cseId = config('services.google.cse_id');
-
         $response = Http::withHeaders([
             'Accept-Encoding' => 'gzip',
             'User-Agent' => 'My Laravel App (gzip)',
         ])->get('https://www.googleapis.com/customsearch/v1', [
-            'q' => 'gua pawon',
+            'q' => 'gua pawon -filetype:pdf -pdf',
             'key' => $apiKey,
             'cx' => $cseId,
             'dateRestrict' => 'y1',
             'exactTerms' => 'pawon',
             'num' => 9,
+            // opstional
             // 'lr' => 'lang_id',
             // 'siteSearch' => 'kompas.com',
             // 'sort' => 'date'
@@ -32,6 +49,9 @@ class newsController extends Controller
         $data = $response->json();
         if (isset($data['items'])) {
             foreach ($data['items'] as $item) {
+                if (str_ends_with($item['link'], '.pdf')) {
+                    continue;
+                }
                 $image = $item['pagemap']['cse_image'][0]['src'] ?? null;
                 $snippet = $item['snippet'];
                 preg_match('/[A-Za-z]{3} \d{1,2}, \d{4}/', $snippet, $matches);
@@ -48,26 +68,17 @@ class newsController extends Controller
                 } else {
                     $formattedDate = null;
                 }
-                // $dateRaw = $item['pagemap']['metatags'][0]['publishdate']
-                //     ?? $item['pagemap']['metatags'][0]['dtk:publishdate']
-                //     ?? null;
-                // $dateRaw = $item['pagemap']['metatags'][0]['publishdate']
-                //     ?? ($item['pagemap']['metatags'][0]['dtk:publishdate'] ?? null);
-                // $dateRaw = $item['pagemap']['metatags'][0]['dtk:publishdate'];
-                // $createDate = $dateRaw ? (new DateTime($dateRaw))->format('Y-m-d') : null;
-
 
                 $articles[] = [
-                    // 'title' => $item['title'],
-                    'title' => $item['pagemap']['metatags'][0]['og:title'],
+                    'title' => $item['pagemap']['metatags'][0]['og:title'] ?? $item['pagemap']['metatags'][0]['title'],
                     'link' => $item['link'],
-                    'snippet' => $item['pagemap']['metatags'][0]['og:description'],
+                    'snippet' => trim(preg_replace('/\b[A-Za-z]{3} \d{1,2}, \d{4}\b\s*\.{3}\s*/', '', $item['snippet'])),
                     'image' => $image,
                     'date' => $formattedDate,
                 ];
             }
         }
 
-        return view('news.news', compact('articles'));
+        Cache::put('cse_data', compact('articles'), now()->addDays(7));
     }
 }

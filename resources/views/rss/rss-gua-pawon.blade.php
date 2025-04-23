@@ -13,12 +13,15 @@
     {{-- @include('components.navbar') --}}
 
     <div class="container  mx-auto px-4 py-8">
+        <a href="/">
+            Kembali
+        </a>
         <h1 class="text-3xl font-bold text-center mb-8">Berita Terkait Gua Pawon</h1>
 
         @if (count($articles) > 0)
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($articles as $article)
-                    <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                         @if ($article['image'])
                             <img src="{{ $article['image'] }}" alt="Thumbnail" class="w-full h-48 object-cover">
                         @endif
@@ -36,7 +39,7 @@
                 @endforeach
             </div>
         @else
-            <p class="text-center text-gray-500">Tidak ada berita ditemukan.</p>
+            <p class="text-center text-gray-500">Sedang Tidak ada berita.</p>
         @endif
     </div>
 
