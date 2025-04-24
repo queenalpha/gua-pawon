@@ -106,4 +106,5 @@
             </p>
         </div>
     </div>
+    @include('components.kotak_saran')
 @endsection
