@@ -7,7 +7,7 @@
         <h2 id="accordion-flush-heading-1">
             <button type="button"
                 class="flex items-center justify-between w-full py-5 text-start font-medium border-b border-gray-200 gap-3 transition duration-300"
-                data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
                 aria-controls="accordion-flush-body-1">
                 <span>Apa itu Goa Pawon dan dimana lokasinya?</span>
                 <svg data-accordion-icon class="w-4 h-4 rotate-180 shrink-0 transition-transform" aria-hidden="true"

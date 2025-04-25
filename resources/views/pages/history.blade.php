@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-4 py-">
+    <div class="max-w-6xl mx-auto px-4">
         <div class="justify-items-end">
             <div class="border-[#D8CC6C] border-r-[5px] pl-5 me-2">
                 <h2 class="text-dark mb-2 text-2xl font-semibold mb-3 mx-2">
@@ -65,44 +65,175 @@
                 </h2>
             </div>
         </div>
-        <div class="container mx-auto px-4 py-8" id="Timeline">
-            <div class="relative wrap overflow-hidden">
-                <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2"></div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+        <div class="container mx-auto px-4 py-8 max-h-[600px] overflow-y-scroll inset-shadow-sm">
+            <div class="relative">
+                <div
+                    class="absolute hidden md:block border-r-2 border-gray-300 h-full left-1/2 transform -translate-x-1/2 z-0">
+                </div>
+
+                <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="md:w-1/2 md:pr-8 text-right order-2 md:order-1">
+                        <p class="text-lg font-bold">&lt;2000</p>
+                        <p class="text-gray-700 text-sm">
+                            Gua Pawon telah dikenal oleh masyarakat sekitar sebagai gua alami di kawasan karst Citatah,
+                            Padalarang, Jawa Barat. Sebelum tahun 2000, gua ini hanya diketahui sebagai bagian dari bentang
+                            alam
+                            yang menarik dan memiliki cerita rakyat yang berkembang di kalangan warga setempat. Namun, belum
+                            ada
+                            penelitian arkeologis yang mendalam mengenai potensi sejarahnya.
+                        </p>
                     </div>
-                    <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="mb-3 font-bold text-gray-800 text-xl">Event Title</h3>
-                        <p class="text-gray-700 leading-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vestibulum in nisi commodo, aliquet velit ac, dapibus elit.</p>
+                    <div class="md:w-1/2 md:pl-8 md:mt-0 order-1 md:order-2">
+                        <img src="{{Vite::asset('../resources/img/timeline1.png')}}"
+                            class="rounded shadow-md w-full h-[200px] object-cover" />
                     </div>
                 </div>
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">2</h1>
+
+                <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="md:w-1/2 md:pr-8 order-1">
+                        <img src="{{Vite::asset('../resources/img/timeline2.png')}}"
+                            class="rounded shadow-md w-full h-[200px] object-cover" />
                     </div>
-                    <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="mb-3 font-bold text-gray-800 text-xl">Event Title</h3>
-                        <p class="text-gray-700 leading-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vestibulum in nisi commodo, aliquet velit ac, dapibus elit.</p>
+                    <div class="md:w-1/2 md:pl-8 md:mt-0 order-2">
+                        <p class="text-lg font-bold">2000</p>
+                        <p class="text-gray-700 text-sm">
+                            Pada tahun 2000, Balai Arkeologi Bandung mulai melakukan penelitian setelah adanya laporan
+                            geologi
+                            yang mengindikasikan keberadaan lapisan-lapisan budaya di Gua Pawon. Penelitian awal ini membuka
+                            jalan bagi ekskavasi dan pengungkapan sejarah yang tersembunyi di dalam gua tersebut.
+                        </p>
                     </div>
                 </div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+
+                <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="md:w-1/2 md:pr-8 text-right order-2 md:order-1">
+                        <p class="text-lg font-bold">2003-2004</p>
+                        <p class="text-gray-700 text-sm">
+                            Ekskavasi besar-besaran dilakukan oleh tim arkeologi dari Balai Arkeologi Bandung. Mereka
+                            berhasil
+                            menemukan berbagai temuan penting seperti alat-alat batu, sisa makanan, dan yang paling
+                            mengejutkan
+                            adalah kerangka manusia purba yang terkubur di dalam gua tersebut.
+                        </p>
                     </div>
-                    <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="mb-3 font-bold text-gray-800 text-xl">Event Title</h3>
-                        <p class="text-gray-700 leading-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vestibulum in nisi commodo, aliquet velit ac, dapibus elit.</p>
+                    <div class="md:w-1/2 md:pl-8 md:mt-0 order-1 md:order-2">
+                        <img src="{{Vite::asset('../resources/img/timeline3.png')}}"
+                            class="rounded shadow-md w-full h-[200px] object-cover" />
+                    </div>
+                </div>
+
+                <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="md:w-1/2 md:pr-8 order-1">
+                        <img src="{{Vite::asset('../resources/img/timeline4.png')}}"
+                            class="rounded shadow-md w-full h-[200px] object-cover" />
+                    </div>
+                    <div class="md:w-1/2 md:pl-8 md:mt-0 order-2">
+                        <p class="text-lg font-bold">2003-2005</p>
+                        <p class="text-gray-700 text-sm">
+                            Analisis terhadap kerangka manusia yang ditemukan menunjukkan bahwa manusia Gua Pawon memiliki
+                            ciri-ciri khas Austro-Melanesia, memberikan wawasan baru mengenai migrasi manusia purba di
+                            kawasan
+                            Asia Tenggara. Temuan ini menjadi sangat penting dalam studi antropologi dan sejarah manusia
+                            Indonesia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="md:w-1/2 md:pr-8 text-right order-2 md:order-1">
+                        <p class="text-lg font-bold">&lt;2005</p>
+                        <p class="text-gray-700 text-sm">
+                            Ekskavasi lanjutan berhasil menemukan berbagai artefak penting seperti alat batu, tulang hewan
+                            hasil
+                            perburuan, dan peralatan rumah tangga dari zaman prasejarah. Ini memperkuat dugaan bahwa Gua
+                            Pawon
+                            pernah menjadi tempat tinggal manusia purba dalam jangka waktu yang cukup lama.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8 md:mt-0 order-1 md:order-2">
+                        <img src="{{Vite::asset('../resources/img/timeline5.png')}}"
+                            class="rounded shadow-md w-full h-[200px] object-cover" />
+                    </div>
+                </div>
+
+                <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
+                    <div class="md:w-1/2 md:pr-8 order-1">
+                        <img src="{{Vite::asset('../resources/img/timeline6.png')}}"
+                            class="rounded shadow-md w-full h-[200px] object-cover" />
+                    </div>
+                    <div class="md:w-1/2 md:pl-8 md:mt-0 order-2">
+                        <p class="text-lg font-bold">2005&gt;</p>
+                        <p class="text-gray-700 text-sm">
+                            Setelah pengakuan pentingnya temuan ini, Gua Pawon ditetapkan sebagai salah satu situs arkeologi
+                            paling penting di Jawa Barat. Sejak saat itu, situs ini terus menjadi objek penelitian ilmiah
+                            dan
+                            juga mulai dikenal sebagai destinasi wisata edukasi sejarah bagi masyarakat umum.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @include('components.kotak_saran')
+
+    <div class="my-8 grid grid-cols-1 md:grid-cols-2 bg-[#1E1109] text-white font-sans">
+        <div class="h-auto md:h-[480px] bg-cover bg-center"
+            style="background-image: url('{{Vite::asset('../resources/img/Alatbatu.png')}}')"></div>
+
+        <div class="p-6 md:p-10 flex flex-col justify-between">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-semibold mb-4 md:mb-6 text-center">Alat Batu</h2>
+                <p class="text-sm md:text-base leading-relaxed mb-3 md:mb-4 text-justify">
+                    Ekskavasi di Gua Pawon telah mengungkap berbagai artefak yang memberikan gambaran tentang kehidupan
+                    manusia prasejarah
+                    di Jawa Barat. Salah satu temuan utama adalah alat-alat batu yang menunjukkan bahwa manusia di gua ini
+                    telah
+                    mengembangkan keterampilan dalam berburu dan mengolah makanan. Alat-alat batu yang ditemukan meliputi
+                    kapak genggam,
+                    yang kemungkinan digunakan untuk berburu dan memotong daging, serta serpihan batu tajam yang berfungsi
+                    sebagai pisau
+                    atau alat pemotong.
+
+                    Selain itu, ditemukan juga alat serut, yang diduga digunakan untuk mengolah kayu atau kulit hewan.
+                    Alat-alat ini
+                    sebagian besar terbuat dari batu andesit atau batu keras lainnya, yang menunjukkan bahwa masyarakat
+                    prasejarah telah
+                    memahami teknik mempertajam dan membentuk batu untuk berbagai keperluan.
+                </p>
+            </div>
+
+            <div class="font-medium flex justify-center gap-2 mt-6">
+                <div class="flex items-center">
+                    <img src="{{Vite::asset('../resources/img/Logo-pawon.png')}}" alt="logo-pawon" class="w-4 h-4">
+                    <span class="ms-2">Gua Pawon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="border-[#D8CC6C] border-l-[5px] pl-5 me-2">
+            <h2 class="text-dark mb-2 text-2xl font-semibold mb-3 mx-2">
+                Keseluruhan
+            </h2>
+        </div>
+        <p class="text-gray-700 text-justify mb-4">
+            Secara keseluruhan, penemuan artefak di Gua Pawon memberikan wawasan yang luas mengenai kehidupan manusia
+            prasejarah di
+            Jawa Barat. Alat batu menunjukkan keterampilan berburu dan mengolah makanan, sementara tulang hewan dan sisa
+            makanan
+            membuktikan bahwa mereka memiliki pola makan yang beragam. Perhiasan dari gigi hiu dan moluska menandakan adanya
+            budaya
+            dan sistem sosial, sedangkan fragmen tembikar menunjukkan awal perkembangan teknologi gerabah. Keberadaan sisa
+            arang dan
+            api unggun juga membuktikan bahwa mereka telah mengenal dan memanfaatkan api dalam kehidupan sehari-hari.
+            Penelitian
+            lebih lanjut diharapkan dapat mengungkap lebih banyak informasi mengenai kehidupan dan budaya manusia prasejarah
+            di Gua
+            Pawon, serta bagaimana mereka beradaptasi dengan lingkungannya selama ribuan tahun.
+        </p>
+    </div>
+
+    <div class="py-10">
+        @include('components.kotak_saran')
+    </div>
 @endsection
