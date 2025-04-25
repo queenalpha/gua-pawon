@@ -937,6 +937,7 @@
             </p>
         </div>
     </div>
+<<<<<<< HEAD
 
     {{-- script untuk buka modal --}}
     <script>
@@ -1090,4 +1091,7 @@
         }
     </script>
 
+=======
+    @include('components.kotak_saran')
+>>>>>>> 8afd655de417cf989a55bbf41eb5d7c414d75108
 @endsection
