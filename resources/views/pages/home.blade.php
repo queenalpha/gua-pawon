@@ -167,61 +167,61 @@
             </h2>
         </div>
         @if (count($articles) > 0)
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {{-- Artikel utama --}}
-                <div class="relative overflow-hidden shadow-lg h-96 lg:h-auto">
-                    @php $mainArticle = $articles[0]; @endphp
-                    @if ($mainArticle['image'])
-                        <img src="{{ $mainArticle['image'] }}" alt="Main Article"
-                            class="w-full h-full object-cover absolute inset-0">
-                    @endif
-                    <a href="{{ $mainArticle['link'] }}" target="_blank"
-                        class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white block hover:opacity-90 transition-opacity">
-                        <h2 class="text-xl font-semibold mb-1 leading-tight">
-                            {{ strip_tags($mainArticle['title']) }}
-                        </h2>
-                        <p class="text-sm opacity-80 mb-1">
-                            {{ date('d M Y', strtotime($mainArticle['pubDate'] ?? now())) }}
-                        </p>
-                        <p class="text-sm">
-                            {{ strip_tags($mainArticle['snippet']) }}
-                        </p>
-                    </a>
-                </div>
-
-                {{-- Artikel lainnya --}}
-                <div class="lg:col-span-2 grid grid-cols-1 gap-4">
-                    @foreach ($articles as $index => $article)
-                        @if ($index > 0 && $index <= 3)
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                @if ($article['image'])
-                                    <img src="{{ $article['image'] }}" alt="Thumbnail"
-                                        class="w-full sm:w-32 h-40 sm:h-32 object-cover rounded">
-                                @endif
-                                <div class="flex-1">
-                                    <a href="{{ $article['link'] }}" target="_blank" class="hover:underline block">
-                                        <h3 class="text-md font-semibold text-gray-900 mb-1 leading-snug">
-                                            {{ strip_tags($article['title']) }}
-                                        </h3>
-                                        <p class="text-xs text-gray-500 mb-1">
-                                            {{ date('d M Y', strtotime($article['pubDate'] ?? now())) }}
-                                        </p>
-                                        <p class="text-sm text-gray-700">
-                                            {{ strip_tags($article['snippet']) }}
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                        @endif
-                    @endforeach
-                    <div class="text-center">
-                        <a href="/berita">Lihat Kumpulan Berita Gua Pawon</a>
-                    </div>
-                </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {{-- Artikel utama --}}
+            <div class="relative overflow-hidden shadow-lg h-96 lg:h-auto">
+                @php $mainArticle = $articles[0]; @endphp
+                @if ($mainArticle['image'])
+                <img src="{{ $mainArticle['image'] }}" alt="Main Article"
+                    class="w-full h-full object-cover absolute inset-0">
+                @endif
+                <a href="{{ $mainArticle['link'] }}" target="_blank"
+                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white block hover:opacity-90 transition-opacity">
+                    <h2 class="text-xl font-semibold mb-1 leading-tight">
+                        {{ strip_tags($mainArticle['title']) }}
+                    </h2>
+                    <p class="text-sm opacity-80 mb-1">
+                        {{ date('d M Y', strtotime($mainArticle['pubDate'] ?? now())) }}
+                    </p>
+                    <p class="text-sm">
+                        {{ strip_tags($mainArticle['snippet']) }}
+                    </p>
+                </a>
             </div>
-        @else
-            <p class="text-center text-gray-500">Tidak ada berita ditemukan.</p>
-        @endif
+
+            {{-- Artikel lainnya --}}
+            <div class="lg:col-span-2 grid grid-cols-1 gap-4">
+                @foreach ($articles as $index => $article)
+                @if ($index > 0 && $index <= 3)
+                    <div class="flex flex-col sm:flex-row gap-4">
+                    @if ($article['image'])
+                    <img src="{{ $article['image'] }}" alt="Thumbnail"
+                        class="w-full sm:w-32 h-40 sm:h-32 object-cover rounded">
+                    @endif
+                    <div class="flex-1">
+                        <a href="{{ $article['link'] }}" target="_blank" class="hover:underline block">
+                            <h3 class="text-md font-semibold text-gray-900 mb-1 leading-snug">
+                                {{ strip_tags($article['title']) }}
+                            </h3>
+                            <p class="text-xs text-gray-500 mb-1">
+                                {{ date('d M Y', strtotime($article['pubDate'] ?? now())) }}
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                {{ strip_tags($article['snippet']) }}
+                            </p>
+                        </a>
+                    </div>
+            </div>
+            @endif
+            @endforeach
+            <div class="text-center">
+                <a href="/berita">Lihat Kumpulan Berita Gua Pawon</a>
+            </div>
+        </div>
+    </div>
+    @else
+    <p class="text-center text-gray-500">Tidak ada berita ditemukan.</p>
+    @endif
     </div>
 
     <div class="max-w-6xl mx-auto px-4 my-10 py-5">
