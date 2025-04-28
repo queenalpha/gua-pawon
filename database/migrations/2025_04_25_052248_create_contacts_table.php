@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('telp')->nullable();
+            $table->text('subject');
             $table->text('messages');
+            $table->text('reply')->nullable();
             $table->boolean('is_answer')->default(false);
             $table->timestamps();
         });

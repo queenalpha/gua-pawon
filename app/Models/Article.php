@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
@@ -21,6 +22,21 @@ class Article extends Model
         'likes',
         'is_draft',
     ];
+
+    protected static function booted()
+    {
+        static::deleting(function ($article) {
+            // Menghapus gambar yang disisipkan dalam content
+            preg_match_all('/<figure[^>]*>.*?<img[^>]+src=["\'](.*?)["\'][^>]*>.*?<\/figure>/is', $article->content, $matches);
+
+            // Jika ada gambar yang disisipkan, hapus file gambar
+            foreach ($matches[1] as $image) {
+                if (Storage::exists($image)) {
+                    Storage::delete($image);
+                }
+            }
+        });
+    }
 
     public function category()
     {

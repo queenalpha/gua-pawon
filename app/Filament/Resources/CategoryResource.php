@@ -48,7 +48,7 @@ class CategoryResource extends Resource
                     }),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),  // Aksi bulk delete
+                // Tables\Actions\DeleteBulkAction::make(), 
             ]);
     }
 
