@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Filament\Resources;
+
+use App\Filament\Resources\ContactResource\Pages;
+use App\Models\Contact;
+use Filament\Icons\Icon;
+use Filament\Forms;
+use Filament\Forms\Components\{TextInput, Textarea, Toggle};
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables\Table;
+use Filament\Tables;
+
+class ContactResource extends Resource
+{
+    protected static ?string $model = Contact::class;
+    protected static ?string $navigationIcon = 'heroicon-o-envelope';
+    protected static ?string $navigationLabel = 'Contacts';
+
+    public static function form(Form $form): Form
+    {
+        return $form->schema([
+            TextInput::make('name')->required()->label('Name'),
+            TextInput::make('email')->required()->email()->label('Email'),
+            TextInput::make('telp')->label('Phone'),
+            Textarea::make('messages')->required()->label('Message'),
+            Toggle::make('is_answer')->label('Answered')->default(false)->hidden(),
+        ]);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                Tables\Columns\TextColumn::make('name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('email')->sortable(),
+                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y'),
+                Tables\Columns\IconColumn::make('is_answer')->boolean()->label('Answered?'),
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\DeleteBulkAction::make(),
+            ]);
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListContacts::route('/'),
+            'create' => Pages\CreateContact::route('/create'),
+            'edit' => Pages\EditContact::route('/{record}/edit'),
+        ];
+    }
+}
