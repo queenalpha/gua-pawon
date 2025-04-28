@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ArticleResource\Pages;
 
 use App\Filament\Resources\ArticleResource;
 use Filament\Resources\Pages\CreateRecord;
+use Filament\Notifications\Notification;
 use Filament\Actions;
 use Filament\Forms\Form;
 use Filament\Actions\CreateAction;
@@ -34,7 +35,7 @@ class CreateArticle extends CreateRecord
     public function getCreateFormAction(): \Filament\Actions\Action
     {
         return parent::getCreateFormAction()
-            ->label('Simpan')
+            ->label('Publish')
             ->successRedirectUrl(ArticleResource::getUrl());
     }
 
@@ -46,6 +47,10 @@ class CreateArticle extends CreateRecord
                 ->action(function () {
                     $this->saveAsDraft = true;
                     $this->create();
+                    Notification::make()
+                        ->title('Draft Berhasil Disimpan')
+                        ->success()  // Menandakan bahwa ini adalah notifikasi sukses
+                        ->send();
                 })
                 ->color('secondary'),
         ];

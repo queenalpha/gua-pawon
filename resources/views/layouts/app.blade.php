@@ -9,6 +9,7 @@
 
     <title>Gua Pawon</title>
     <link rel="icon" type="image/png" href="{{ Vite::asset('../resources/img/Logo-pawon.png') }}">
+    @livewireStyles 
 </head>
 
 <body>
@@ -16,6 +17,7 @@
 
     @yield('history')
     @yield('ecology')
+@livewireScripts
 </body>
 @include('components.footer')
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>

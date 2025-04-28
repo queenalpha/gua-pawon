@@ -74,11 +74,11 @@ class ArticleResource extends Resource
     });
 })'
                     ]),
-                // FileUpload::make('cover')
-                //     ->image()
-                //     ->directory('covers')
-                //     ->label('Cover Image')
-                //     ->nullable(),
+                FileUpload::make('cover')
+                    ->image()
+                    ->directory('covers')
+                    ->label('Cover Image')
+                    ->nullable(),
                 // Toggle::make('is_draft')->label('Save as Draft'),
             ]);
     }

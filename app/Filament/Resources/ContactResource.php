@@ -25,7 +25,7 @@ class ContactResource extends Resource
         return $form->schema([
             TextInput::make('name')->required()->label('Name'),
             TextInput::make('email')->required()->email()->label('Email'),
-            TextInput::make('telp')->label('Phone Number(Optional)'),
+            TextInput::make('telp')->label('Phone Number(Optional)')->maxLength(15),
             Textarea::make('subject')->required()->label('Subject'),
             Textarea::make('messages')->required()->label('Message'),
             Toggle::make('is_answer')->default(false)->hidden(),
@@ -77,7 +77,7 @@ class ContactResource extends Resource
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                // Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
