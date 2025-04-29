@@ -14,6 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Table;
 use Filament\Tables;
+use FilamentTiptapEditor\TiptapEditor;
 
 
 class ArticleResource extends Resource
@@ -44,40 +45,25 @@ class ArticleResource extends Resource
                     ->required(),
                 RichEditor::make('content')
                     ->label('Content')
-                    ->required()
-                    ->extraAttributes([
-                        'x-init' => 'document.querySelector(".filament-forms-rich-editor").addEventListener("quill-create", (e) => { 
-    e.detail.quill.getModule("toolbar").addHandler("image", () => { 
-        // Your image upload logic here
-        let imageInput = document.createElement("input");
-        imageInput.type = "file";
-        imageInput.accept = "image/*";
-        imageInput.click();
-        imageInput.onchange = () => { 
-            let file = imageInput.files[0];
-            if (file) {
-                let formData = new FormData();
-                formData.append("image", file);
-
-                // Upload the image to the server
-                axios.post("/upload-image", formData)
-                    .then(response => {
-                        let imageUrl = response.data.url; // URL of the uploaded image
-                        let range = e.detail.quill.getSelection();
-                        e.detail.quill.insertEmbed(range.index, "image", imageUrl); // Insert the image URL into the editor
-                    })
-                    .catch(error => {
-                        console.error("There was an error uploading the image:", error);
-                    });
-            }
-        };
-    });
-})'
-                    ]),
+                    ->fileAttachmentsDisk('public')
+                    ->fileAttachmentsDirectory('image-article')
+                    ->fileAttachmentsVisibility('public')
+                    ->required(),
                 FileUpload::make('cover')
                     ->image()
+                    ->imageEditor()
+                    ->previewable(true)
+                    ->disk('public')
                     ->directory('covers')
                     ->label('Cover Image')
+                    ->hint('Disarankan ukuran 1200 x 400 px, format JPG atau PNG.')
+                    ->helperText('Ukuran maksimal 5MB.')
+                    ->imageResizeMode('cover')
+                    ->imageCropAspectRatio('3:1')
+                    ->imageResizeTargetWidth(1200)
+                    ->imageResizeTargetHeight(400)
+                    ->maxSize(5120) // Max size = 5MB
+                    ->acceptedFileTypes(['image/jpeg', 'image/png']) // Hanya JPG & PNG
                     ->nullable(),
                 // Toggle::make('is_draft')->label('Save as Draft'),
             ]);
@@ -94,7 +80,7 @@ class ArticleResource extends Resource
                 Tables\Columns\TextColumn::make('category.category_name')->label('Category')->searchable(),
                 // Tables\Columns\IconColumn::make('is_draft')->boolean()->label('Draft?'),
                 Tables\Columns\TextColumn::make('view_count')->label('Views')->sortable(),
-                // Tables\Columns\TextColumn::make('cover')->label('Path cover'),
+                Tables\Columns\TextColumn::make('cover')->label('Path cover'),
                 Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
             ])

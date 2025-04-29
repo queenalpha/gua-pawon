@@ -16,7 +16,16 @@ class CreateArticle extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        $data['slug'] = Str::slug($data['title']);
+        $slug = Str::slug($data['title']);
+        $originalSlug = $slug;
+        $counter = 2;
+
+        while (\App\Models\Article::where('slug', $slug)->exists()) {
+            $slug = $originalSlug . '-' . $counter;
+            $counter++;
+        }
+
+        $data['slug'] = $slug;
 
         if ($this->saveAsDraft) {
             $data['is_draft'] = true;

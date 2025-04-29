@@ -33,10 +33,8 @@ class ArticleController extends Controller
     {
         $article = \App\Models\Article::where('id_article', $id_article)->firstOrFail();
 
-        // Cek apakah sudah like
         $liked = false;
         if ($article->likes) {
-            // Jika sudah like, set liked ke true
             $liked = true;
         }
 
