@@ -18,7 +18,7 @@
         <a href="{{ route('articles.index') }}" class="inline-flex items-center mb-6 text-blue-600 hover:underline">
             ← Kembali ke Daftar Artikel
         </a>
-        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default.jpg')) }}" alt="{{ $article->title }}" class="w-full h-64 object-cover rounded-lg shadow mb-6">
+        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}" alt="{{ $article->title }}" class="w-full h-64 object-cover rounded-lg shadow mb-6">
         <h1 class="text-4xl font-bold mb-4">{{ $article->title }}</h1>
         <div class="flex items-center space-x-4 text-sm text-gray-500 mb-8">
             <div><span class="font-semibold">{{ $article->view_count }}</span> views</div>
@@ -83,7 +83,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @forelse ($related_articles as $related)
                     <div class="bg-white rounded shadow hover:shadow-lg p-4 transition">
-                        <img src="{{ asset('storage/' . ($related->cover ? $related->cover : 'covers/default.jpg')) }}" alt="{{ $related->title }}" class="w-full h-40 object-cover rounded mb-4">
+                        <img src="{{ asset('storage/' . ($related->cover ? $related->cover : 'covers/default/default.jpg')) }}" alt="{{ $related->title }}" class="w-full h-40 object-cover rounded mb-4">
                         <h3 class="text-lg font-semibold">
                             <a href="{{ route('articles.show', $related->slug) }}" class="hover:text-blue-600">{{ $related->title }}</a>
                         </h3>

@@ -22,7 +22,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($articles as $article)
                     <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default.jpg')) }}" alt="Thumbnail" class="w-full h-48 object-cover">
+                        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}" alt="Thumbnail" class="w-full h-48 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-semibold mb-2 text-gray-800">
                                 <a href="{{ route('articles.show', $article->slug) }}" class="hover:text-blue-600 transition-colors duration-200">

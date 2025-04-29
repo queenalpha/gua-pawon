@@ -52,7 +52,7 @@ class CreateArticle extends CreateRecord
     {
         return [
             Actions\Action::make('saveAsDraft')
-                ->label('Simpan sebagai Draft')
+                ->label('Simpan ke Draft')  // Label tombol
                 ->action(function () {
                     $this->saveAsDraft = true;
                     $this->create();
@@ -61,7 +61,9 @@ class CreateArticle extends CreateRecord
                         ->success()  // Menandakan bahwa ini adalah notifikasi sukses
                         ->send();
                 })
-                ->color('secondary'),
+                ->color('primary')  // Mengubah warna tombol
+                ->size('lg')  // Ukuran tombol lebih besar
+                ->tooltip('Simpan artikel sebagai draft')  // Tooltip saat hover di tombol
         ];
     }
 }

@@ -42,9 +42,9 @@ class ResearchResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('author')->sortable(),
-                Tables\Columns\TextColumn::make('publish_date')->date(),
+                Tables\Columns\TextColumn::make('title')->searchable()->limit(50),
+                Tables\Columns\TextColumn::make('author')->searchable()->limit(30),
+                Tables\Columns\TextColumn::make('publish_date')->date()->sortable(),
                 Tables\Columns\TextColumn::make('url_doi')->label('DOI URL')->searchable(),
             ])
             ->actions([
