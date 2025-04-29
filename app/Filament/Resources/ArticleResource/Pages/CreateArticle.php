@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ArticleResource\Pages;
 
 use App\Filament\Resources\ArticleResource;
 use Filament\Resources\Pages\CreateRecord;
+use Filament\Notifications\Notification;
 use Filament\Actions;
 use Filament\Forms\Form;
 use Filament\Actions\CreateAction;
@@ -15,7 +16,16 @@ class CreateArticle extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        $data['slug'] = Str::slug($data['title']);
+        $slug = Str::slug($data['title']);
+        $originalSlug = $slug;
+        $counter = 2;
+
+        while (\App\Models\Article::where('slug', $slug)->exists()) {
+            $slug = $originalSlug . '-' . $counter;
+            $counter++;
+        }
+
+        $data['slug'] = $slug;
 
         if ($this->saveAsDraft) {
             $data['is_draft'] = true;
@@ -34,7 +44,7 @@ class CreateArticle extends CreateRecord
     public function getCreateFormAction(): \Filament\Actions\Action
     {
         return parent::getCreateFormAction()
-            ->label('Simpan')
+            ->label('Publish')
             ->successRedirectUrl(ArticleResource::getUrl());
     }
 
@@ -42,12 +52,18 @@ class CreateArticle extends CreateRecord
     {
         return [
             Actions\Action::make('saveAsDraft')
-                ->label('Simpan sebagai Draft')
+                ->label('Simpan ke Draft')  // Label tombol
                 ->action(function () {
                     $this->saveAsDraft = true;
                     $this->create();
+                    Notification::make()
+                        ->title('Draft Berhasil Disimpan')
+                        ->success()  // Menandakan bahwa ini adalah notifikasi sukses
+                        ->send();
                 })
-                ->color('secondary'),
+                ->color('primary')  // Mengubah warna tombol
+                ->size('lg')  // Ukuran tombol lebih besar
+                ->tooltip('Simpan artikel sebagai draft')  // Tooltip saat hover di tombol
         ];
     }
 }

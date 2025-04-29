@@ -234,6 +234,6 @@
     </div>
 
     <div class="py-10">
-        @include('components.kotak_saran')
+        @livewire('kotak_saran')
     </div>
 @endsection

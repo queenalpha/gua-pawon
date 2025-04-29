@@ -1090,5 +1090,6 @@
         }
     </script>
 
-    @include('components.kotak_saran')
+    @livewire('kotak_saran')
+
 @endsection

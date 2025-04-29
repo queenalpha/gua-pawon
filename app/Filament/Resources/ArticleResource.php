@@ -14,6 +14,7 @@ use Filament\Resources\Resource;
 use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Table;
 use Filament\Tables;
+use FilamentTiptapEditor\TiptapEditor;
 
 
 class ArticleResource extends Resource
@@ -26,11 +27,19 @@ class ArticleResource extends Resource
     {
         return $form
             ->schema([
+                // Title
                 TextInput::make('title')
-                    ->required(),
+                    ->required()
+                    ->label('Title')
+                    ->columnSpan(2)
+                    ->placeholder('Masukkan judul'),
+
+                // Kategori
                 Select::make('id_categories')
-                    ->label('Category')
+                    ->label('Categories')
+                    ->placeholder('Pilih Kategori')
                     ->relationship('category', 'category_name')
+                    ->live()
                     ->createOptionForm([
                         TextInput::make('category_name')
                             ->required()
@@ -41,29 +50,56 @@ class ArticleResource extends Resource
                             $set('id_categories', $state);
                         }
                     })
-                    ->required(),
-                RichEditor::make('content')
-                    ->label('Content')
-                    ->required(),
+                    ->required()
+                    ->columnSpan(2), // Lebar lebih besar
+
+                // Cover
                 FileUpload::make('cover')
                     ->image()
+                    ->imageEditor()
+                    ->previewable(true)
+                    ->disk('public')
                     ->directory('covers')
-                    ->label('Cover Image')
-                    ->nullable(),
-                // Toggle::make('is_draft')->label('Save as Draft'),
+                    ->label('Cover')
+                    ->hint('Recommended size: 1200 x 400 px, JPG or PNG.')
+                    ->helperText('Max size: 5MB.')
+                    ->imageResizeMode('cover')
+                    ->imageCropAspectRatio('3:1')
+                    ->imageResizeTargetWidth(1200)
+                    ->imageResizeTargetHeight(400)
+                    ->maxSize(5120) // Max size = 5MB
+                    ->acceptedFileTypes(['image/jpeg', 'image/png'])
+                    ->nullable()
+                    ->columnSpan(2), // Lebar lebih besar
+
+                // Content (Membuat lebih besar)
+                RichEditor::make('content')
+                    ->label('Content')
+                    ->fileAttachmentsDisk('public')
+                    ->fileAttachmentsDirectory('image-article')
+                    ->fileAttachmentsVisibility('public')
+                    ->required() // Membuat editor lebih besar
+                    ->placeholder('Tulis konten disini')
+                    // ->helperText('This is where you can add the content of your article.')
+                    ->columnSpan(2), // Lebar lebih besar
             ]);
     }
+
 
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('category.category_name')->label('Category'),
+                Tables\Columns\TextColumn::make('title')
+                    ->sortable()
+                    ->searchable()
+                    ->limit(50),
+                // Tables\Columns\TextColumn::make('content'),
+                Tables\Columns\TextColumn::make('category.category_name')->label('Category')->searchable()->sortable(),
                 // Tables\Columns\IconColumn::make('is_draft')->boolean()->label('Draft?'),
-                Tables\Columns\TextColumn::make('view_count')->label('Views'),
-                Tables\Columns\TextColumn::make('likes')->label('Likes'),
-                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y'),
+                Tables\Columns\TextColumn::make('view_count')->label('Views')->sortable(),
+                Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable(),
+                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
             ])
             ->filters([  // Tambahkan filter di sini
                 SelectFilter::make('is_draft')
@@ -84,7 +120,7 @@ class ArticleResource extends Resource
                     }),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 

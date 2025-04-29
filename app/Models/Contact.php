@@ -19,8 +19,10 @@ class Contact extends Model
         'name',
         'email',
         'telp',
+        'subject',
         'messages',
         'is_answer',
+        'reply'
     ];
 
     // Method to send a reply via email

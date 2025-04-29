@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     <link rel="icon" type="image/png" href="{{ Vite::asset('../resources/img/Logo-pawon.png') }}">
     <title>Gua Pawon</title>
-
+    @livewireStyles 
 </head>
 
 <body>
@@ -277,7 +277,8 @@
 
 
     @include('components.faq')
-    @include('components.kotak_saran')
+    @livewire('kotak_saran')
+    @livewireScripts
 </body>
 @include('components.footer')
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>

@@ -6,6 +6,8 @@ use App\Http\Controllers\homeController;
 use App\Http\Controllers\newsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RSSController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleImageUploadController;
 
 
 
@@ -14,5 +16,14 @@ Route::get('/gua-pawon', [HomeController::class, 'index']);
 
 
 Route::get('/history', [historyController::class, 'index']);
+
 Route::get('/ecology', [ecologyController::class, 'index']);
+
 Route::get('/berita', [RSSController::class, 'index']);
+
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+Route::post('/articles/{id_article}/like', [ArticleController::class, 'like'])->name('articles.like');
+
+
+Route::post('/upload-image', [ArticleImageUploadController::class, 'uploadImage']);
