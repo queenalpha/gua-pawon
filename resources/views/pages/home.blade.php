@@ -269,5 +269,4 @@
 
     @include('components.faq')
     @livewire('kotak_saran')
-    @livewireScripts
 @endsection

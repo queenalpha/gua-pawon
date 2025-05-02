@@ -78,6 +78,10 @@
                         <button onclick="showTab('budaya')"
                             class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Budaya</button>
                     </li>
+                    <li class="me-2">
+                        <button onclick="showTab('konservasi')"
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Konservasi</button>
+                    </li>
                 </ul>
             </div>
 
@@ -100,7 +104,8 @@
                                         </h6>
                                         <!-- Tanggal -->
                                         <p class="text-sm text-gray-500 mt-2">
-                                            {{ \Carbon\Carbon::parse($article->created_at)->diffForHumans() }}
+                                            {{ \Carbon\Carbon::parse($article->created_at)->diffForHumans() }} · 
+                                            {{ number_format_short($article->view_count) }} views
                                         </p>
                                         <!-- Deskripsi -->
                                         <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
@@ -124,10 +129,47 @@
                     @endif
                 </div>
 
-                <div id="tab-arkeologi" class="tab-content hidden">Konten untuk tab Arkeologi</div>
-                <div id="tab-wisata" class="tab-content hidden">Konten untuk tab Wisata</div>
-                <div id="tab-sains" class="tab-content hidden">Konten untuk tab Sains</div>
-                <div id="tab-budaya" class="tab-content hidden">Konten untuk tab Budaya</div>
+                <!-- Kategori Tabs -->
+                @foreach ($categories as $category)
+                <div id="tab-{{ strtolower($category) }}" class="tab-content hidden">
+                    @php
+                        $categoryArticles = $articles->where('category.category_name', $category);
+                    @endphp
+
+                    @if ($categoryArticles->count() > 0)
+                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            @foreach ($categoryArticles as $article)
+                                <div class="flex flex-col shadow">
+                                    <div class="h-56 w-full">
+                                        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}"
+                                            alt="cover-image" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="p-4 flex flex-col">
+                                        <h6 class="text-slate-800 text-lg font-semibold leading-snug">{{ $article->title }}</h6>
+                                        <p class="text-sm text-gray-500 mt-2">
+                                            {{ \Carbon\Carbon::parse($article->created_at)->diffForHumans() }} · 
+                                            {{ number_format_short($article->view_count) }} views
+                                        </p>
+                                        <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
+                                            {{ strip_tags($article->content) }}
+                                        </p>
+                                        <a href="{{ route('articles.show', $article->slug) }}" 
+                                            class="text-red-500 text-sm font-semibold hover:underline flex items-center gap-1 mt-2">
+                                            Baca Selengkapnya
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @else
+                        <p class="text-center text-gray-500">Tidak ada artikel di kategori {{ $category }}.</p>
+                    @endif
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -153,8 +195,9 @@
                                 <h3 class="text-lg font-semibold text-slate-800 mb-1">
                                     {{ $popular->title }}
                                 </h3>
-                                <p class="text-xs text-gray-500 mb-2">
-                                    {{ \Carbon\Carbon::parse($popular->created_at)->translatedFormat('d F Y') }}
+                                <p class="text-sm text-gray-500 mt-2">
+                                    {{ \Carbon\Carbon::parse($popular->created_at)->diffForHumans() }} · 
+                                    {{ number_format_short($popular->view_count) }} views
                                 </p>
                                 <p class="text-slate-600 text-xs leading-relaxed mb-3">
                                     {{ \Illuminate\Support\Str::limit(strip_tags($popular->content), 150, '...') }}
@@ -180,7 +223,6 @@
     <div class="mt-12">
         @include('components.faq')
         @livewire('kotak_saran')
-        @livewireScripts
     </div>
 @endsection
 

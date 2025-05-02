@@ -6,8 +6,8 @@
             alt="{{ $article->title }}" class="w-full h-90 object-cover shadow mb-6">
         <h1 class="text-4xl font-bold mb-4 text-center">{{ $article->title }}</h1>
         <div class="flex items-center flex-wrap justify-center space-x-4 text-sm text-gray-500 mb-8">
-            <div><span class="font-semibold">{{ $article->view_count }}</span> views</div>
-            <div><span class="font-semibold" id="likes-count">{{ $article->likes }}</span> likes</div>
+            <div><span class="font-semibold">{{ number_format_short($article->view_count) }}</span> views</div>
+            <div><span class="font-semibold" id="likes-count">{{ number_format_short($article->likes) }}</span> likes</div>
             <!-- Like button -->
             <button id="like-button" class="text-red-500 hover:text-red-600 cursor-pointer mt-2 sm:mt-0"
                 data-id="{{ $article->id_article }}">
@@ -81,7 +81,7 @@
                     @endforeach
                 </div>
             @else
-                <p class="text-center text-gray-500">Belum ada artikel terkait.</p>
+                <p class="text-center text-gray-500">Belum ada artikel terkait {{ $article->category->category_name }}.</p>
             @endif
 
         </div>

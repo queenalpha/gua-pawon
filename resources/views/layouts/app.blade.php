@@ -7,7 +7,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @vite('resources/css/app.css')
-   
 
     <title>@yield('title', 'Default Title')</title>
     <link rel="icon" type="image/png" href="{{ Vite::asset('../resources/img/Logo-pawon.png') }}">
@@ -17,6 +16,7 @@
 <body>
     @include('components.navbar')
 
+    @yield('error')
     @yield('home')
     @yield('history')
     @yield('ecology')
