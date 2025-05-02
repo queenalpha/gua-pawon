@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
+@section('title', 'Gua Pawon')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <link rel="icon" type="image/png" href="{{ Vite::asset('../resources/img/Logo-pawon.png') }}">
-    <title>Gua Pawon</title>
-    @livewireStyles 
-</head>
-
-<body>
-    @include('components.navbar')
+@section('home')    
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner1.jpg') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
@@ -160,6 +150,7 @@
         </div>
     </div>
 
+    
     <div class="max-w-6xl mx-auto px-4 my-10 py-5">
         <div class="border-[#D8CC6C] border-l-[5px] pl-5 mb-6">
             <h2 class="text-dark text-2xl font-semibold">
@@ -279,8 +270,4 @@
     @include('components.faq')
     @livewire('kotak_saran')
     @livewireScripts
-</body>
-@include('components.footer')
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-
-</html>
+@endsection

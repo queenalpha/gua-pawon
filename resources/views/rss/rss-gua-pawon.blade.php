@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <link rel="icon" type="image/png" href="{{ asset('img/Asset 11.png') }}">
-    <title>RSS Gua Pawon</title>
-</head>
-
-<body>
-    {{-- @include('components.navbar') --}}
+@extends ('layouts.app')
+@section('title', 'Berita Gua Pawon') 
+@section('Berita') 
 
     <div class="container  mx-auto px-4 py-8">
-        <a href="/">
-            Kembali
-        </a>
-        <h1 class="text-3xl font-bold text-center mb-8">Berita Terkait Gua Pawon</h1>
+        <h1 class="text-3xl font-bold text-center mb-8 mt-10">Berita Terkait Gua Pawon</h1>
 
         @if (count($articles) > 0)
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -43,9 +30,5 @@
         @endif
     </div>
 
-    @include('components.footer')
-
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-</body>
-
-</html>
+@endsection

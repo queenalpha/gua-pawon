@@ -1,49 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
+@section('title', 'Artikel Gua Pawon')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <link rel="icon" type="image/png" href="{{ asset('img/Asset 11.png') }}">
-    <title>Post Gua Pawon</title>
-</head>
-
-<body>
-    {{-- @include('components.navbar') --}}
-
-    <div class="container mx-auto px-4 py-8">
-        <a href="/" class="text-black-600 hover:underline">
-            Kembali
-        </a>
-        <h1 class="text-3xl font-bold text-center mb-8">Post Terkait Gua Pawon</h1>
-
-        @if ($articles->count() > 0)
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                @foreach ($articles as $article)
-                    <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}" alt="Thumbnail" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2 text-gray-800">
-                                <a href="{{ route('articles.show', $article->slug) }}" class="hover:text-blue-600 transition-colors duration-200">
-                                    {{ $article->title }}
-                                </a>
-                            </h3>
-                            <p class="text-gray-600 text-sm mt-2">
-                                {{ Str::limit(strip_tags($article->content), 100) }}
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        @else
-            <p class="text-center text-gray-500">Sedang Tidak ada berita.</p>
-        @endif
+@section('artikel')
+    <div class="max-w-6xl mx-auto px-4 pt-12">
+        <div class="text-center mt-10">
+            <span class="font-extrabold text-3xl tracking-wide">PAWON</span>
+            <span class="font-light text-2xl ml-1">artikel</span>
+        </div>
     </div>
 
-    @include('components.footer')
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-</body>
+    <div id="default-carousel" class="relative w-full mt-8" data-carousel="slide">
+        <div class="relative h-f overflow-hidden md:h-96">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://images.unsplash.com/photo-1459356067573-0a190eb1fcf5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src=https://images.unsplash.com/photo-1521106581851-da5b6457f674?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
 
-</html>
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <div class="flex justify-center mt-8">
+        <div class="w-full max-w-6xl">
+            <div class="text-base font-bold text-center text-gray-500">
+                <ul class="flex flex-wrap -mb-px justify-center" id="tabs">
+                    <li class="me-2">
+                        <button onclick="showTab('semua')"
+                            class="tab-btn inline-block p-4 border-b-2 rounded-t-lg text-black border-black">Semua</button>
+                    </li>
+                    <li class="me-2">
+                        <button onclick="showTab('arkeologi')"
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Arkeologi</button>
+                    </li>
+                    <li class="me-2">
+                        <button onclick="showTab('wisata')"
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Wisata</button>
+                    </li>
+                    <li class="me-2">
+                        <button onclick="showTab('sains')"
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Sains</button>
+                    </li>
+                    <li class="me-2">
+                        <button onclick="showTab('budaya')"
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Budaya</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="p-4 text-gray-700 dark:text-gray-300">
+                <div id="tab-semua" class="tab-content">
+                    @if ($articles->count() > 0)
+                        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            @foreach ($articles as $article)
+                                <div class="flex flex-col    shadow">
+                                    <!-- Gambar -->
+                                    <div class="h-56 w-full">
+                                        <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}"
+                                            alt="cover-image" class="w-full h-full object-cover" />
+                                    </div>
+                                    <!-- Konten -->
+                                    <div class="p-4 flex flex-col">
+                                        <!-- Judul -->
+                                        <h6 class="text-slate-800 text-lg font-semibold leading-snug">
+                                            {{ $article->title }}
+                                        </h6>
+                                        <!-- Tanggal -->
+                                        <p class="text-sm text-gray-500 mt-2">
+                                            {{ \Carbon\Carbon::parse($article->created_at)->diffForHumans() }}
+                                        </p>
+                                        <!-- Deskripsi -->
+                                        <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
+                                            {{ strip_tags($article->content) }}
+                                        </p>
+                                        <!-- Link Baca Selengkapnya -->
+                                        <a href="{{ route('articles.show', $article->slug) }}"
+                                            class="text-red-500 text-sm font-semibold hover:underline flex items-center gap-1 mt-2">
+                                            Baca Selengkapnya
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @else
+                        <p class="text-center text-gray-500">Sedang Tidak ada berita.</p>
+                    @endif
+                </div>
+
+                <div id="tab-arkeologi" class="tab-content hidden">Konten untuk tab Arkeologi</div>
+                <div id="tab-wisata" class="tab-content hidden">Konten untuk tab Wisata</div>
+                <div id="tab-sains" class="tab-content hidden">Konten untuk tab Sains</div>
+                <div id="tab-budaya" class="tab-content hidden">Konten untuk tab Budaya</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 pt-12">
+        <div class="space-y-4-px-4">
+            <div class="border-[#D8CC6C] border-l-[5px] pl-5">
+                <h2 class="text-dark mb-2 text-2xl font-semibold mb-3">
+                    Artikel Populer
+                </h2>
+            </div>
+
+            @if ($popular_articles->count())
+                <div class="flex flex-col gap-4">
+                    @foreach ($popular_articles as $popular)
+                        <div class="flex flex-col lg:flex-row items-start gap-4 shadow-sm border border-gray-200">
+                            <!-- Gambar -->
+                            <div class="w-full lg:w-1/3 h-50 overflow-hidden p-4">
+                                <img src="{{ asset('storage/' . ($popular->cover ? $popular->cover : 'covers/default/default.jpg')) }}"
+                                    alt="{{ $popular->title }}" class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-full lg:w-2/3 pt-10">
+                                <h3 class="text-lg font-semibold text-slate-800 mb-1">
+                                    {{ $popular->title }}
+                                </h3>
+                                <p class="text-xs text-gray-500 mb-2">
+                                    {{ \Carbon\Carbon::parse($popular->created_at)->translatedFormat('d F Y') }}
+                                </p>
+                                <p class="text-slate-600 text-xs leading-relaxed mb-3">
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($popular->content), 150, '...') }}
+                                </p>
+                                <a href="{{ route('articles.show', $popular->slug) }}"
+                                    class="text-orange-500 text-xs font-semibold hover:underline inline-flex items-center gap-1">
+                                    Baca Selengkapnya
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+
+
+        </div>
+    </div>
+
+
+    <div class="mt-12">
+        @include('components.faq')
+        @livewire('kotak_saran')
+        @livewireScripts
+    </div>
+@endsection
+
+<script>
+    function showTab(tabId) {
+        const contents = document.querySelectorAll('.tab-content');
+        const tabs = document.querySelectorAll('.tab-btn');
+        contents.forEach(c => c.classList.add('hidden'));
+        tabs.forEach(t => {
+            t.classList.remove('text-black', 'border-black');
+            t.classList.add('border-transparent');
+        });
+
+        document.getElementById('tab-' + tabId).classList.remove('hidden');
+        const activeTab = Array.from(tabs).find(t => t.textContent.toLowerCase() === tabId);
+        if (activeTab) {
+            activeTab.classList.remove('border-transparent');
+            activeTab.classList.add('text-black', 'border-black');
+        }
+    }
+</script>

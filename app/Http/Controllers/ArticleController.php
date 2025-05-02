@@ -11,7 +11,14 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::where('is_draft', false)->latest()->get();
-        return view('articles.index', compact('articles'));
+
+        $popular_articles = \App\Models\Article::where('is_draft', false)
+        ->where('view_count', '>', 100)
+        ->select('*')
+        ->limit(3)
+        ->get();
+
+        return view('articles.index', compact('articles', 'popular_articles'));
     }
 
     public function show($slug)
@@ -21,6 +28,7 @@ class ArticleController extends Controller
 
         // Ambil 3 artikel lain, random, beda dengan yang dibuka sekarang
         $related_articles = \App\Models\Article::where('id_article', '!=', $article->id)
+            ->where('id_categories', $article->id_categories)
             ->where('is_draft', false)
             ->inRandomOrder()
             ->limit(3)

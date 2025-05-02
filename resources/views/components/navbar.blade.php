@@ -133,7 +133,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
-        <a href="/article" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
+        <a href="/articles" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
             <span class="text-lg font-medium group-hover:text-blue-700">Article</span>
             <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

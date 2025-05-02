@@ -2036,7 +2036,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/3264999c3123f55b7651c275efb6942034c47eda",
                 "reference": "3264999c3123f55b7651c275efb6942034c47eda",
->>>>>>>>> Temporary merge branch 2
                 "shasum": ""
             },
             "require": {
@@ -2238,11 +2237,8 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-<<<<<<<<< Temporary merge branch 1
-            "time": "2025-04-24T14:11:20+00:00"
-=========
+            "time": "2025-04-24T14:11:20+00:00",
             "time": "2025-04-23T14:49:24+00:00"
->>>>>>>>> Temporary merge branch 2
         },
         {
             "name": "laravel/prompts",

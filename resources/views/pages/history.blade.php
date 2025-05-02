@@ -174,7 +174,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="my-8 grid grid-cols-1 md:grid-cols-2 bg-[#1E1109] text-white font-sans">
         <div class="h-auto md:h-[480px] bg-cover bg-center"
             style="background-image: url('{{Vite::asset('../resources/img/Alatbatu.png')}}')"></div>
