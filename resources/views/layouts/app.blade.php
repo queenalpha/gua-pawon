@@ -21,6 +21,7 @@
     @yield('history')
     @yield('ecology')
     @yield('Berita')
+    @yield('jurnal gua-pawon')
     @yield('artikel')
     @yield('artikel-konten')
 

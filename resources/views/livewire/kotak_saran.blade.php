@@ -10,61 +10,69 @@
 
       <div class="md:col-span-1 border-r pr-8">
         <!-- Form Kontak Livewire -->
-        <form wire:submit.prevent="submit" class="space-y-6">
-          <input type="email" placeholder="Email"
-            class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
-            wire:model.defer="email" required />
+        <div wire:key="contact-form-{{$resetKey}}">
+          <form wire:submit.prevent="submit" class="space-y-6">
+            <input type="email" placeholder="Email"
+              class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm focus:ring-0"
+              wire:model.defer="email" required />
 
-          <input type="text" placeholder="Nama"
-            class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
-            wire:model.defer="name" required />
+            <input type="text" placeholder="Nama"
+              class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm focus:ring-0"
+              wire:model.defer="name" required />
 
-          <input type="tel" placeholder="No Telepon"
-            class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
-            wire:model.defer="telp" />
+            <input type="tel" placeholder="No Telepon"
+              class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm focus:ring-0"
+              wire:model.defer="telp" />
 
-          <input type="text" placeholder="Subject"
-            class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
-            wire:model.defer="subject" required />
+            <input type="text" placeholder="Subject"
+              class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm focus:ring-0"
+              wire:model.defer="subject" required />
 
-          <textarea placeholder="Pesan"
-            class="w-full border-0 border-b border-black outline-none py-0 placeholder:text-black h-15 resize-none text-sm"
-            wire:model.defer="messages" required></textarea>
+            <textarea placeholder="Pesan"
+              class="w-full border-0 border-b border-black outline-none py-0 placeholder:text-black h-15 resize-none text-sm"
+              wire:model.defer="messages" required></textarea>
 
-          <button type="submit"
-            class="w-full bg-black text-white py-2 rounded-full mt-1 hover:bg-gray-800 transition">Kirim</button>
-        </form>
+            <button type="submit"
+              class="w-full bg-black text-white py-2 rounded-full mt-1 hover:bg-gray-800 transition flex justify-center items-center gap-2"
+              wire:loading.attr="disabled" wire:target="submit">
+
+              <!-- Text normal -->
+              <span wire:loading.remove wire:target="submit">Kirim</span>
+
+              <!-- Spinner & Text while loading -->
+              <span wire:loading wire:target="submit" class="flex items-center justify-center">
+                <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                </svg>
+                <span>Proses...</span>
+              </span>
+            </button>
+
+
+          </form>
+        </div>
 
 
         @if (session()->has('success'))
-        <div class="fixed top-10 right-4 z-50">
-          <div id="toast-success"
-          class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800"
-          role="alert">
-          <div
-            class="inline-flex items-center justify-center shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            viewBox="0 0 20 20">
-            <path
-              d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            <span class="sr-only">Check icon</span>
+          <div class="fixed top-10 right-4 z-50">
+            <div id="toast-success"
+            class="flex items-center w-full max-w-xs p-4 mb-4 text-white bg-white rounded-lg shadow-sm border border-orange-600"
+            role="alert">
+            <div
+              class="inline-flex items-center justify-center shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 20 20">
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+              </svg>
+              <span class="sr-only">Check icon</span>
+            </div>
+            <div class="ms-3 text-sm font-normal text-black">{{ session('success') }}</div>
+            </div>
           </div>
-          <div class="ms-3 text-sm font-normal">{{ session('success') }}</div>
-          <button type="button" onclick="document.getElementById('toast-success')?.remove()"
-            class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-            aria-label="Close">
-            <span class="sr-only">Close</span>
-            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 14 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-            </svg>
-          </button>
-
-          </div>
-        </div>
-      @endif
+        @endif
 
       </div>
 
@@ -91,15 +99,33 @@
   </section>
 </div>
 
+
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn = document.querySelector('[data-dismiss-target="#toast-success"]');
+  function initToastAutoHide() {
     const toast = document.querySelector('#toast-success');
 
-    if (closeBtn && toast) {
-      closeBtn.addEventListener('click', function () {
-        toast.remove(); // atau: toast.style.display = 'none';
-      });
+    if (toast) {
+      setTimeout(() => {
+        toast.remove();
+      }, 3000);
+
+      const closeBtn = toast.querySelector('[data-dismiss-target="#toast-success"]');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          toast.remove();
+        });
+      }
     }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initToastAutoHide();
+
+    const observer = new MutationObserver(() => {
+      initToastAutoHide();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
   });
+
 </script>

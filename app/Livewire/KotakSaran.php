@@ -10,6 +10,12 @@ class KotakSaran extends Component
     public $email, $name, $telp, $subject, $messages;
 
 
+    public $resetKey;
+
+    public function mount()
+    {
+        $this->resetKey = rand();
+    }
     public function submit()
     {
         Contact::create([
@@ -22,10 +28,11 @@ class KotakSaran extends Component
             'reply' => null,
         ]);
 
-        // Reset field
         $this->reset();
+        $this->resetKey = rand();
 
-        // Kirim pesan sukses
+
+
         session()->flash('success', 'Pesan kamu sudah terkirim!');
     }
 
