@@ -18,32 +18,32 @@ class ResearchResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-document-magnifying-glass';
     protected static ?string $navigationLabel = 'Research';
 
-   public static function form(Form $form): Form
-{
-    return $form->schema([
-        TextInput::make('title')
-            ->label('Judul')
-            ->required(),
+    public static function form(Form $form): Form
+    {
+        return $form->schema([
+            TextInput::make('title')
+                ->label('Judul')
+                ->required(),
 
-        Textarea::make('abstract')
-            ->label('Abstract')
-            ->required(),
+            Textarea::make('abstract')
+                ->label('Abstract')
+                ->required(),
 
-        TextInput::make('author')
-            ->label('Author')
-            ->required(),
+            TextInput::make('author')
+                ->label('Author')
+                ->required(),
 
-        DatePicker::make('publish_date')
-            ->label('Publish Date')
-            ->required(),
+            DatePicker::make('publish_date')
+                ->label('Publish Date')
+                ->required(),
 
-        TextInput::make('url_doi')
-            ->label('DOI URL')
-            ->url()
-            ->required(),
-    ])
-    ->columns(1); // Menampilkan semua input secara vertikal (berbaris ke bawah)
-}
+            TextInput::make('url_doi')
+                ->label('DOI URL')
+                ->url()
+                ->required(),
+        ])
+            ->columns(1); // Menampilkan semua input secara vertikal (berbaris ke bawah)
+    }
     public static function table(Table $table): Table
     {
         return $table
@@ -55,13 +55,7 @@ class ResearchResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                DeleteAction::make() // Tombol Delete
-                    ->label('Delete')
-                    ->color('danger')
-                    ->icon('heroicon-o-trash')
-                    ->action(function (Research $record) {
-                        $record->delete(); // Menghapus kategori
-                    }),
+                DeleteAction::make()
             ])
             ->bulkActions([
                 // Tables\Actions\DeleteBulkAction::make(),

@@ -112,12 +112,6 @@ class ArticleResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 DeleteAction::make() // Tombol Delete
-                    ->label('Delete')
-                    ->color('danger')
-                    ->icon('heroicon-o-trash')
-                    ->action(function (Article $record) {
-                        $record->delete(); // Menghapus kategori
-                    }),
             ])
             ->bulkActions([
                 // Tables\Actions\DeleteBulkAction::make(),

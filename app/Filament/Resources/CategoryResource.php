@@ -42,14 +42,8 @@ class CategoryResource extends Resource
                     ->searchable(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),  // Tombol Edit
+                // Tables\Actions\EditAction::make(),  // Tombol Edit
                 DeleteAction::make() // Tombol Delete
-                    ->label('Delete')
-                    ->color('danger')
-                    ->icon('heroicon-o-trash')
-                    ->action(function (Category $record) {
-                        $record->delete(); // Menghapus kategori
-                    }),
             ])
             ->bulkActions([
                 // Tables\Actions\DeleteBulkAction::make(), 

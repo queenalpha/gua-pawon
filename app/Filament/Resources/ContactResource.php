@@ -23,35 +23,19 @@ class ContactResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
-            TextInput::make('name')->required()->label('Name'),
-            TextInput::make('email')->required()->email()->label('Email'),
-            TextInput::make('telp')->label('Phone Number(Optional)')->maxLength(15),
-            Textarea::make('subject')->required()->label('Subject'),
-            Textarea::make('messages')->required()->label('Message'),
+            TextInput::make('name')->required()->label('Name')->disabled(),
+            TextInput::make('email')->required()->email()->label('Email')->disabled(),
+            TextInput::make('telp')->label('Phone Number(Optional)')->maxLength(15)->disabled(),
+            Textarea::make('subject')->required()->label('Subject')->disabled(),
+            Textarea::make('messages')->required()->label('Message')->disabled(),
             Toggle::make('is_answer')->default(false)->hidden(),
             Textarea::make('reply')
                 ->label('Reply')
                 ->placeholder('Reply message... ')
+                ->rows(6)
                 ->visible(fn(string $context) => $context === 'edit'),
         ]);
     }
-
-    // public static function mutateFormDataBeforeUpdate(array $data): array
-    // {
-    //     // Jika ada balasan, kirim email balasan
-    //     if (isset($data['reply']) && $data['reply']) {
-    //         $contact = Contact::find($data['id']);
-    //         $replyData = [
-    //             'reply' => $data['reply'], // Balasan yang diisi
-    //             'name' => $contact->name,  // Nama pengirim
-    //             'email' => $contact->email, // Email penerima
-    //         ];
-
-    //         Mail::to($contact->email)->send(new ContactReply($replyData));
-    //     }
-
-    //     return $data;
-    // }
 
     public static function table(Table $table): Table
     {
@@ -73,7 +57,7 @@ class ContactResource extends Resource
                 Tables\Columns\IconColumn::make('is_answer')->boolean()->label('Answered?'),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()->label('Reply'),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
