@@ -11,5 +11,6 @@ return [
     'kirim' => 'Kirim',
     'no-kontak' => 'Nomor Kontak',
     'kunjungi-kami' => 'Kunjungi kami',
-    'number' => '0'
+    'number' => '0',
+    'proses' => 'Proses'
 ];

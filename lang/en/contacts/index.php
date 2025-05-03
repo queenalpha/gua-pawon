@@ -11,5 +11,6 @@ return [
     'kirim' => 'Send',
     'no-kontak' => 'Contact Number',
     'kunjungi-kami' => 'Visit us',
-    'number' => '(+62) '
+    'number' => '(+62) ',
+    'proses' => 'Process'
 ];

@@ -7,8 +7,7 @@
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: Penelitian</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
-                Temukan kisah manusia purba yang pernah hidup di Gua Pawon. Jelajahi sejarah, budaya, dan
-                peninggalan arkeologi dalam satu platform edukatif.
+                Temukan kisah manusia purba yang pernah hidup di Gua Pawon. Jelajahi sejarah, budaya, dan peninggalan arkeologi dalam satu platform edukatif.
             </p>
         </div>
     </section>
@@ -57,6 +56,12 @@
                 </div>
             </a>
         @endforeach
+        @if($journals->isEmpty())          
+            <div class="text-center text-gray-500 my-15">
+                <p class="text-xl font-semibold">Tidak ada data jurnal yang ditemukan.</p>
+                <p class="text-sm">Coba kata kunci atau filter lain.</p>
+            </div>
+        @endif
     </div>
 
     {{-- <nav aria-label="Page navigation example">
