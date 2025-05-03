@@ -5,36 +5,19 @@
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner1.jpg') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
-            <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: Warisan Sejarah,
-                Jejak
-                Peradaban</h1>
-            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">Temukan kisah manusia purba yang pernah hidup
-                di
-                Gua Pawon. <br /> Jelajahi sejarah, budaya, dan peninggalan arkeologi.</p>
+            <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: {{__('pages/home.warisan-sejarah')}}</h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
+                {{__('pages/home.desc-judul-1')}} 
+                <br/>
+                {{__('pages/home.desc-judul-2')}}
+            </p>
         </div>
     </section>
 
     <div class="max-w-6xl mx-auto px-4 py-10 text-justify text-base space-y-5">
-        <p>Gua Pawon adalah sebuah gua alami dan situs purbakala yang terletak di Desa Gunung Masigit, Kecamatan
-            Cipatat,
-            Kabupaten Bandung Barat, atau sekitar 25 km arah barat Kota Bandung. Lokasinya berada di kawasan perbukitan
-            kapur (karst) yang dikenal sebagai Karst Citatah. Gua ini menjadi salah satu tempat yang menarik untuk
-            dikunjungi karena nilai sejarah dan arkeologinya.</p>
-        <p>Secara geologis, para ahli menjelaskan kawasan Bandung saat ini sebagai cekungan danau purba. Hal tersebut
-            dapat
-            dibuktikan dari banyaknya ditemui fosil binatang air tawar. Kawasan Karst Citatah adalah gugusan pegunungan
-            kapur yang membentang dari Padalarang hingga Rajamandala dan merupakan saksi bisu dari proses geologi yang
-            berlangsung jutaan tahun lalu. Kawasan ini memiliki banyak gua yang terbentuk secara alami, salah satunya
-            adalah
-            Gua Pawon.</p>
-        <p>Dikutip dari hima.fib.ugm.ac.id, Gua Pawon merupakan bukti kehidupan manusia prasejarah karena ditemukan
-            sisa-sisa kerangka manusia yang diperkirakan berasal dari masa Mesolitikum (zaman batu tengah). Penelitian
-            yang
-            dilakukan menunjukkan bahwa gua ini pernah dihuni oleh manusia purba yang hidup dengan cara berburu dan
-            meramu.
-            Temuan arkeologis seperti alat batu, tulang belulang, dan pecahan gerabah semakin memperkuat pentingnya
-            situs
-            ini dalam memahami kehidupan masa lalu.</p>
+        <p>{{__('pages/home.paragraf-1')}}</p>
+        <p>{{__('pages/home.paragraf-2')}}</p>
+        <p>{{__('pages/home.paragraf-3')}}</p>
     </div>
 
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4 pb-10">
@@ -49,28 +32,19 @@
     </div>
 
     <div class="max-w-6xl mx-auto px-4 text-justify text-base space-y-4">
-        <p>Gua dengan ketinggian 709 Mdpl ini memiliki luas 38×16 meter dan tinggi 3 meter. Daya tarik utama Gua Pawon
-            adalah pemandangan alamnya yang memukau dan nilai sejarahnya yang tinggi. Pengunjung dapat menikmati
-            panorama
-            pegunungan kapur yang indah serta belajar tentang kehidupan manusia purba melalui berbagai informasi dan
-            artefak
-            yang dipamerkan.</p>
+        <p>{{__('pages/home.daya-tarik-pawon')}}</p>
         <ul class="list-disc list-inside space-y-2">
             <li>
-                Memiliki keindahan alam yang eksotis, adanya lereng bukit hijau yang asri di sekelilingnya dan
-                batuan karst peninggalan
-                zaman purba yang masih kokoh.
+                {{__('pages/home.list-1')}}
             </li>
             <li>
-                Dapat melakukan berbagai kegiatan outdoor yang menantang seperti cliff climbing dan jelajah gua atau
-                area karst di
-                dataran tinggi.
+                {{__('pages/home.list-2')}}
             </li>
             <li>
-                Fasilitas museum tour untuk melihat langsung koleksi-koleksi benda purbakala.
+                {{__('pages/home.list-3')}}
             </li>
             <li>
-                Spot foto instagenik dengan background keindahan alam.
+                {{__('pages/home.list-4')}}
             </li>
         </ul>
     </div>
@@ -79,39 +53,39 @@
         <div class="overflow-hidden rounded shadow-lg">
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Sejarah" class="w-full h-48 object-cover" />
             <a href="/history#Sejarah" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>Sejarah</span> <span>→</span>
+                <span>{{__('components/navbar.sejarah')}}</span> <span>→</span>
             </a>
         </div>
         <div class="overflow-hidden rounded shadow-lg">
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Ekologi" class="w-full h-48 object-cover" />
             <a href="/ecology" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>Ekologi & Geologi</span> <span>→</span>
+                <span>{{__('components/navbar.ekologi-geologi')}}</span> <span>→</span>
             </a>
         </div>
         <div class="overflow-hidden rounded shadow-lg">
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Konservasi"
                 class="w-full h-48 object-cover" />
             <a href="#" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>Upaya konservasi</span> <span>→</span>
+                <span>{{__('components/navbar.upaya-konservasi')}}</span> <span>→</span>
             </a>
         </div>
         <div class="overflow-hidden rounded shadow-lg">
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Penelitian"
                 class="w-full h-48 object-cover" />
             <a href="#" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>Penelitian</span> <span>→</span>
+                <span>{{__('components/navbar.penelitian')}}</span> <span>→</span>
             </a>
         </div>
         <div class="overflow-hidden rounded shadow-lg">
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Artikel" class="w-full h-48 object-cover" />
             <a href="#" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>Artikel</span> <span>→</span>
+                <span>{{__('components/navbar.artikel')}}</span> <span>→</span>
             </a>
         </div>
         <div class="overflow-hidden rounded shadow-lg">
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Kontak" class="w-full h-48 object-cover" />
             <a href="#" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>Kontak & Lokasi</span> <span>→</span>
+                <span>{{__('pages/home.kontak-lokasi')}}</span> <span>→</span>
             </a>
         </div>
     </div>
@@ -125,18 +99,10 @@
                     </h2>
                 </div>
                 <p class="text-gray-700 text-justify text-base">
-                    Selamat datang di Gua Pawon, situs bersejarah yang menyimpan jejak kehidupan manusia purba di
-                    Bandung Barat.
-                    Dalam video tour ini, kita akan menelusuri keindahan alam serta peninggalan arkeologi yang
-                    tersembunyi di
-                    dalam gua. Saksikan bagaimana dinding-dinding batu kapur yang megah membingkai cerita masa lalu,
-                    sementara
-                    pemandangan perbukitan sekitar menambah pesona tempat ini. Jelajahi sejarah, budaya, dan keindahan
-                    alam Goa
-                    Pawon dalam pengalaman virtual yang menarik!
+                    {{__('pages/home.tour-desc')}}
                 </p>
                 <p class="text-gray-700 text-justify">
-                    Temukan keindahan Gua Pawon dari setiap keindahan pada tiap sisinya melalui video berikut.
+                    {{__('pages/home.temukan-keindahan')}}
                 </p>
             </div>
 
@@ -154,7 +120,7 @@
     <div class="max-w-6xl mx-auto px-4 my-10 py-5">
         <div class="border-[#D8CC6C] border-l-[5px] pl-5 mb-6">
             <h2 class="text-dark text-2xl font-semibold">
-                Berita Seputar Gua Pawon
+                {{__('news/rss-gua-pawon.berita-seputar-pawon')}}
             </h2>
         </div>
         @if (count($articles) > 0)
@@ -206,12 +172,12 @@
             @endif
             @endforeach
             <div class="text-center">
-                <a href="/news">Lihat Kumpulan Berita Gua Pawon</a>
+                <a href="/news">{{__('news/rss-gua-pawon.lihat-kumpulan-berita')}}</a>
             </div>
         </div>
     </div>
     @else
-    <p class="text-center text-gray-500">Tidak ada berita ditemukan.</p>
+    <p class="text-center text-gray-500">{{__('news/rss-gua-pawon.berita-tidak-ditemukan')}}</p>
     @endif
     </div>
 
@@ -222,11 +188,7 @@
             </h2>
         </div>
         <p class="text-gray-700 text-justify mb-4">
-            Anda dapat melihat setiap sudut gua dengan perspektif yang nyata, seolah-olah berada langsung di
-            dalamnya. Jelajahi
-            keunikan formasi batuan, lorong-lorong bersejarah, dan keindahan alam Goa Pawon tanpa batasan ruang dan
-            waktu. Dengan 3D
-            preview ini, sejarah dan keindahan.
+            {{__('pages/home.3d-desc')}}
         </p>
         <div id="default-carousel" class="relative rounded-lg overflow-hidden shadow-lg" data-carousel="static">
             <div class="relative h-[500px]" data-carousel-inner>

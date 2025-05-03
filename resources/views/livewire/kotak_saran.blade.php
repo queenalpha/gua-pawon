@@ -81,8 +81,7 @@
           <p class="flex items-center mt-1">
             <img src="{{ Vite::asset('resources/img/placeholder.png') }}" class="w-4 h-4 mr-2 object-contain"
               alt="Location Icon" style="width: 1rem; height: 1rem;">
-            <a href="https://maps.app.goo.gl/pgiBAj3uKo1RiaJd9" class="hover:text-blue text-blue">Balai Pelestarian
-              Kebudayaan Wilayah IX | Jl. Cinambo Jl. Ujungberung No.136 40293 Bandung Jawa Barat</a>
+            <a href="https://maps.app.goo.gl/pgiBAj3uKo1RiaJd9" class="hover:text-blue text-blue">Balai Pelestarian Kebudayaan Wilayah IX | Jl. Cinambo Jl. Ujungberung No.136, 40293, Kota Bandung, Jawa Barat.</a>
           </p>
         </div>
       </div>
