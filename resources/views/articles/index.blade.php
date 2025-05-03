@@ -62,27 +62,27 @@
                 <ul class="flex flex-wrap -mb-px justify-center" id="tabs">
                     <li class="me-2">
                         <button onclick="showTab('semua')"
-                            class="tab-btn inline-block p-4 border-b-2 rounded-t-lg text-black border-black">{{__('articles/index.semua')}}</button>
+                            class="tab-btn inline-block p-4 border-b-2 rounded-t-lg text-black border-black" data-tab="semua">{{__('articles/index.semua')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('arkeologi')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.arkeologi')}}</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="arkeologi">{{__('articles/index.arkeologi')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('wisata')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.wisata')}}</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="wisata">{{__('articles/index.wisata')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('sains')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.sains')}}</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="sains">{{__('articles/index.sains')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('budaya')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.budaya')}}</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="budaya">{{__('articles/index.budaya')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('konservasi')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.konservasi')}}</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" data-tab="konservasi">{{__('articles/index.konservasi')}}</button>
                     </li>
                 </ul>
             </div>
@@ -239,7 +239,7 @@
         });
 
         document.getElementById('tab-' + tabId).classList.remove('hidden');
-        const activeTab = Array.from(tabs).find(t => t.textContent.toLowerCase() === tabId);
+        const activeTab = Array.from(tabs).find(t => t.dataset.tab === tabId);
         if (activeTab) {
             activeTab.classList.remove('border-transparent');
             activeTab.classList.add('text-black', 'border-black');

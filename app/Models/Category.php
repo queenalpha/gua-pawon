@@ -19,6 +19,12 @@ class Category extends Model
     public $timestamps = false;
 
 
+    public function getTranslatedNameAttribute()
+    {
+        return __('articles/category.' . $this->category_name);
+    }
+
+
     public function articles()
     {
         return $this->hasMany(Article::class, 'id_categories');

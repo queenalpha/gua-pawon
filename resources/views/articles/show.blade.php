@@ -48,7 +48,7 @@
         <div class="max-w-6xl mx-auto px-4 mb-10 mt-12">
             <div class="border-[#D8CC6C] border-l-[5px] pl-5">
                 <h2 class="text-dark mb-2 text-2xl font-semibold mb-3">
-                    {{__('articles/show.terkait-dengan')}} {{ $article->category->category_name }}
+                    {{__('articles/show.terkait-dengan')}} {{ $article->category->translated_name }}
                 </h2>
             </div>
             @if ($related_articles->count() > 0)
@@ -81,7 +81,7 @@
                     @endforeach
                 </div>
             @else
-                <p class="text-center text-gray-500">Belum ada artikel terkait {{ $article->category->category_name }}.</p>
+                <p class="text-center text-gray-500">{{__('articles/show.belum-ada-artikel-terkait')}} {{ $article->category->translated_name }}.</p>
             @endif
 
         </div>
