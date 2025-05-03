@@ -206,7 +206,7 @@
             @endif
             @endforeach
             <div class="text-center">
-                <a href="/berita">Lihat Kumpulan Berita Gua Pawon</a>
+                <a href="/news">Lihat Kumpulan Berita Gua Pawon</a>
             </div>
         </div>
     </div>

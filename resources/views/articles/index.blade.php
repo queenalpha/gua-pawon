@@ -1,11 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Artikel Gua Pawon')
+@section('title')
+    {{__('articles/index.judul')}}
+@endsection
 
 @section('artikel')
     <div class="max-w-6xl mx-auto px-4 pt-12">
         <div class="text-center mt-10">
             <span class="font-extrabold text-3xl tracking-wide">PAWON</span>
-            <span class="font-light text-2xl ml-1">artikel</span>
+            <span class="font-light text-2xl ml-1">{{__('articles/index.artikel')}}</span>
         </div>
     </div>
 
@@ -60,27 +62,27 @@
                 <ul class="flex flex-wrap -mb-px justify-center" id="tabs">
                     <li class="me-2">
                         <button onclick="showTab('semua')"
-                            class="tab-btn inline-block p-4 border-b-2 rounded-t-lg text-black border-black">Semua</button>
+                            class="tab-btn inline-block p-4 border-b-2 rounded-t-lg text-black border-black">{{__('articles/index.semua')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('arkeologi')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Arkeologi</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.arkeologi')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('wisata')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Wisata</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.wisata')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('sains')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Sains</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.sains')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('budaya')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Budaya</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.budaya')}}</button>
                     </li>
                     <li class="me-2">
                         <button onclick="showTab('konservasi')"
-                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">Konservasi</button>
+                            class="tab-btn inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300">{{__('articles/index.konservasi')}}</button>
                     </li>
                 </ul>
             </div>
@@ -114,7 +116,7 @@
                                         <!-- Link Baca Selengkapnya -->
                                         <a href="{{ route('articles.show', $article->slug) }}"
                                             class="text-red-500 text-sm font-semibold hover:underline flex items-center gap-1 mt-2">
-                                            Baca Selengkapnya
+                                            {{__('articles/index.selengkapnya')}}
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                                                 viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -155,7 +157,7 @@
                                         </p>
                                         <a href="{{ route('articles.show', $article->slug) }}" 
                                             class="text-red-500 text-sm font-semibold hover:underline flex items-center gap-1 mt-2">
-                                            Baca Selengkapnya
+                                            {{__('articles/index.selengkapnya')}}
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                                                 viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -178,7 +180,7 @@
         <div class="space-y-4-px-4">
             <div class="border-[#D8CC6C] border-l-[5px] pl-5">
                 <h2 class="text-dark mb-2 text-2xl font-semibold mb-3">
-                    Artikel Populer
+                    {{__('articles/index.artikel-populer')}}
                 </h2>
             </div>
 
@@ -204,7 +206,7 @@
                                 </p>
                                 <a href="{{ route('articles.show', $popular->slug) }}"
                                     class="text-orange-500 text-xs font-semibold hover:underline inline-flex items-center gap-1">
-                                    Baca Selengkapnya
+                                    {{__('articles/index.selengkapnya')}}
                                     <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>

@@ -1,10 +1,10 @@
 <div>
-  <section class="w-full bg-white py-12 px-6 md:px-24">
+  <section class="w-full bg-white py-12 px-6 md:px-24" id="kontak">
     <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-start">
       <div class="md:col-span-1">
-        <h2 class="text-2xl font-bold mb-6">Hubungi Kami</h2>
-        <h3 class="text-base font-semibold mb-2">Saran dan Masukan</h3>
-        <p class="text-base text-gray-700">Berikan kami saran dan masukan demi pengembangan website yang lebih baik lagi
+        <h2 class="text-2xl font-bold mb-6">{{__('contacts/index.hubungi-kami')}}</h2>
+        <h3 class="text-base font-semibold mb-2">{{__('contacts/index.saran-masukan')}}</h3>
+        <p class="text-base text-gray-700">{{__('contacts/index.berikan-kami-saran')}}
         </p>
       </div>
 
@@ -15,24 +15,24 @@
             class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
             wire:model.defer="email" required />
 
-          <input type="text" placeholder="Nama"
+          <input type="text" placeholder="{{__('contacts/index.nama')}}"
             class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
             wire:model.defer="name" required />
 
-          <input type="tel" placeholder="No Telepon"
+          <input type="tel" placeholder="{{__('contacts/index.telp')}}"
             class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
             wire:model.defer="telp" />
 
-          <input type="text" placeholder="Subject"
+          <input type="text" placeholder="{{__('contacts/index.subjek')}}"
             class="w-full border-0 border-b border-black outline-none py-1 placeholder:text-black text-sm"
             wire:model.defer="subject" required />
 
-          <textarea placeholder="Pesan"
+          <textarea placeholder="{{__('contacts/index.pesan')}}"
             class="w-full border-0 border-b border-black outline-none py-0 placeholder:text-black h-15 resize-none text-sm"
             wire:model.defer="messages" required></textarea>
 
           <button type="submit"
-            class="w-full bg-black text-white py-2 rounded-full mt-1 hover:bg-gray-800 transition">Kirim</button>
+            class="w-full bg-black text-white py-2 rounded-full mt-1 hover:bg-gray-800 transition">{{__('contacts/index.kirim')}}</button>
         </form>
 
 
@@ -70,14 +70,14 @@
 
       <div class="md:col-span-1">
         <div class="mb-4">
-          <p class="font-semibold">Nomor Kontak</p>
+          <p class="font-semibold">{{__('contacts/index.no-kontak')}}</p>
           <p class="flex items-center mt-1">
             <img src="{{ Vite::asset('resources/img/phone-call.png') }}" class="w-4 h-4 mr-2 object-contain"
-              alt="Phone Call Icon" style="width: 1rem; height: 1rem;">08227804942
+              alt="Phone Call Icon" style="width: 1rem; height: 1rem;">{{__('contacts/index.number')}}8227804942
           </p>
         </div>
         <div>
-          <p class="font-semibold">Kunjungi kami</p>
+          <p class="font-semibold">{{__('contacts/index.kunjungi-kami')}}</p>
           <p class="flex items-center mt-1">
             <img src="{{ Vite::asset('resources/img/placeholder.png') }}" class="w-4 h-4 mr-2 object-contain"
               alt="Location Icon" style="width: 1rem; height: 1rem;">

@@ -6,8 +6,8 @@
             alt="{{ $article->title }}" class="w-full h-90 object-cover shadow mb-6">
         <h1 class="text-4xl font-bold mb-4 text-center">{{ $article->title }}</h1>
         <div class="flex items-center flex-wrap justify-center space-x-4 text-sm text-gray-500 mb-8">
-            <div><span class="font-semibold">{{ number_format_short($article->view_count) }}</span> views</div>
-            <div><span class="font-semibold" id="likes-count">{{ number_format_short($article->likes) }}</span> likes</div>
+            <div><span class="font-semibold">{{ number_format_short($article->view_count) }}</span> {{__('articles/show.dilihat')}}</div>
+            <div><span class="font-semibold" id="likes-count">{{ number_format_short($article->likes) }}</span> {{__('articles/show.suka')}}</div>
             <!-- Like button -->
             <button id="like-button" class="text-red-500 hover:text-red-600 cursor-pointer mt-2 sm:mt-0"
                 data-id="{{ $article->id_article }}">
@@ -48,7 +48,7 @@
         <div class="max-w-6xl mx-auto px-4 mb-10 mt-12">
             <div class="border-[#D8CC6C] border-l-[5px] pl-5">
                 <h2 class="text-dark mb-2 text-2xl font-semibold mb-3">
-                    Terkait {{ $article->category->category_name }}
+                    {{__('articles/show.terkait-dengan')}} {{ $article->category->category_name }}
                 </h2>
             </div>
             @if ($related_articles->count() > 0)
@@ -71,7 +71,7 @@
                                 </p>
                                 <a href="{{ route('articles.show', $article->slug) }}"
                                     class="text-red-500 text-sm font-semibold hover:underline flex items-center gap-1 mt-2">
-                                    Baca Selengkapnya
+                                    {{__('articles/show.selengkapnya')}}
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
