@@ -3,7 +3,7 @@
 @section('Berita') 
 
     <div class="container  mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8 mt-10">Berita Terkait Gua Pawon</h1>
+        <h1 class="text-3xl font-bold text-center mb-8 mt-10">{{__('news/rss-gua-pawon.berita-gua-pawon')}}</h1>
 
         @if (count($articles) > 0)
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -26,7 +26,7 @@
                 @endforeach
             </div>
         @else
-            <p class="text-center text-gray-500">Sedang Tidak ada berita.</p>
+            <p class="text-center text-gray-500">{{__('news/rss-gua-pawon.tidak-ada-berita')}}</p>
         @endif
     </div>
 

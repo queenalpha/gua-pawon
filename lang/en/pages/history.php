@@ -1,0 +1,23 @@
+<?php
+return [
+    'sejarah-gua' => 'Cave History',
+    'deskripsi-1' => 'Discover the story of prehistoric humans who once lived in Pawon Cave.',
+    'deskripsi-2' => 'Explore the history, culture, and archaeological remains.',
+    'sejarah-awal' => 'Early History',
+    'paragraf-1' => 'Geologically, Pawon Cave was formed as part of the Rajamandala Formation, a carbonate rock formation from the Late Oligocene to Early Miocene (Mariyanto). This formation underwent sedimentation in a shallow marine environment and developed into an ancient coral reef (Kusumadinata). Over time, dolomitization and the dissolution of meteoric water led to the formation of caves within the limestone, including Pawon Cave (Maryanto).',
+    'paragraf-2' => 'The Citatah karst area is known for its many natural caves, formed through long-term geological processes. The geological structure in this region shows fractures and cracks that allow water to penetrate and dissolve the limestone, creating cavities that developed into caves (Maryanto). Several caves around Citatah have historical and archaeological significance, but Pawon Cave is one of the most renowned due to its human remains.',
+    'indeks' => 'Index',
+    'sejarah' => 'History',
+    'sekitar-gua' => 'Fauna Around the Cave',
+    'timeline-penemuan' => 'Discovery Timeline of Pawon Cave',
+    'sebelum-2000' => 'Pawon Cave was already known by the local community as a natural cave in the Citatah karst area, Padalarang, West Java. Before the year 2000, it was regarded as a scenic part of the landscape with local folklore, but no in-depth archaeological research had been conducted to uncover its historical potential.',
+    'tahun-2000' => 'In 2000, the Bandung Archaeology Center began research following a geological report indicating the presence of cultural layers in Pawon Cave. This initial research paved the way for excavations and the unveiling of the cave’s hidden history.',
+    'tahun-2004' => 'A major excavation was conducted by an archaeological team from the Bandung Archaeology Center. They discovered many significant findings such as stone tools, food remnants, and most remarkably, prehistoric human skeletons buried within the cave.',
+    'tahun-2005' => 'Analysis of the human skeletons revealed that the Pawon Cave humans had Austro-Melanesian features, providing new insights into the migration of ancient humans in Southeast Asia. This discovery is highly significant in anthropological and historical studies of humanity in Indonesia.',
+    'kurang-2005' => 'Further excavations uncovered various important artifacts such as stone tools, hunted animal bones, and household items from prehistoric times. These findings strengthened the hypothesis that Pawon Cave was once inhabited by prehistoric humans for an extended period.',
+    'lebih-2005' => "After the recognition of the site's significance, Pawon Cave was designated as one of the most important archaeological sites in West Java. Since then, it has continued to be the focus of scientific research and has also become an educational historical tourism destination for the public.",
+    'alat-batu' => 'Stone Tools',
+    'alat-batu-desc' => 'Excavations in Pawon Cave have uncovered various artifacts that provide insight into the life of prehistoric humans in West Java. One of the main discoveries was stone tools, indicating that the cave dwellers had developed skills in hunting and food processing. These tools included hand axes, likely used for hunting and cutting meat, and sharp stone flakes used as knives or cutting instruments. Additionally, scrapers were found, believed to be used for working wood or animal hides. Most of these tools were made from andesite or other hard stones, showing that prehistoric people had knowledge of how to sharpen and shape stones for various purposes.',
+    'keseluruhan' => 'Overall',
+    'keseluruhan-desc' => 'Overall, the discovery of artifacts in Pawon Cave provides broad insights into the life of prehistoric humans in West Java. The stone tools show hunting and food-processing skills, while animal bones and food remnants demonstrate a varied diet. Jewelry made from shark teeth and mollusks suggests the presence of culture and social systems, while pottery fragments indicate the early development of ceramic technology. The presence of charcoal and campfire remains also proves that they had discovered and used fire in daily life. Further research is expected to reveal more information about the life and culture of prehistoric humans in Pawon Cave, and how they adapted to their environment over thousands of years.'
+];
