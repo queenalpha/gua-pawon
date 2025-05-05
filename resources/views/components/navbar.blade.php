@@ -78,7 +78,7 @@
                 </li>                
 
                 <li>
-                    <a href="#kontak"
+                    <a href="/gua-pawon#kontak"
                         class="text-gray-700 block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
                         {{__('components/navbar.kontak')}}
                     </a>
@@ -167,7 +167,7 @@
     <div class="absolute bottom-6 left-0 right-0 flex justify-center">
         <div class="text-sm text-gray-600 font-medium flex items-center gap-1">
             <img src="{{ Vite::asset('resources/img/Logo-pawon.png') }}" alt="Logo Gua Pawon" class="h-4 w-4">
-            Gua Pawon
+            Tim Gua Pawon
         </div>
     </div>
 </div>
