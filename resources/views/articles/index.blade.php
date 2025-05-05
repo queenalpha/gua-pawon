@@ -127,7 +127,7 @@
                             @endforeach
                         </div>
                     @else
-                        <p class="text-center text-gray-500">Sedang Tidak ada berita.</p>
+                        <p class="text-center text-gray-500">{{__('articles/index.tidak-ada-berita')}}</p>
                     @endif
                 </div>
 

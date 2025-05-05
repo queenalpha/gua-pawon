@@ -10,5 +10,6 @@ return [
     'budaya' => 'Culture',
     'konservasi' => 'Conservation',
     'selengkapnya' => 'Read More',
-    'artikel-populer' => 'Popular Articles'
+    'artikel-populer' => 'Popular Articles',
+    'tidak-ada-berita' => 'Currently No news',
 ];
