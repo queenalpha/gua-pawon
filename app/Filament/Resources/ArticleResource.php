@@ -104,17 +104,17 @@ class ArticleResource extends Resource
                 Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
             ])
-            ->filters(
-                [  // Tambahkan filter di sini
-                    // SelectFilter::make('is_draft')
-                    //     ->label('Draft Status')
-                    //     ->options([
-                    //         '1' => 'Draft',  // 1 berarti Draft
-                    //         '0' => 'Published',  // 0 berarti Published
-                    //     ])
-                    TrashedFilter::make(),
-                ],
-            )
+            ->filters([
+                // Filter untuk Draft (is_draft)
+                SelectFilter::make('is_draft')
+                    ->label('Draft Status')
+                    ->options([
+                        '1' => 'Draft',
+                        '0' => 'Published',
+                    ]),
+                //filter soft delete
+                TrashedFilter::make(),
+            ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
