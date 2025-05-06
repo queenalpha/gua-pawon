@@ -4,17 +4,15 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArticleResource\Pages;
 use App\Models\Article;
-use App\Models\Category;
-use Filament\Forms;
-use Filament\Forms\Components\{TextInput, RichEditor, FileUpload, Toggle, Select, Hidden};
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\{TextInput, RichEditor, FileUpload, Select,};
 use Filament\Forms\Form;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Actions\Action;
 use Filament\Resources\Resource;
-use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Table;
 use Filament\Tables;
-use FilamentTiptapEditor\TiptapEditor;
+use Filament\Tables\Filters\TrashedFilter;
+use Illuminate\Database\Eloquent\Builder;
 
 
 class ArticleResource extends Resource
@@ -89,6 +87,11 @@ class ArticleResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            // ->query(function (Builder $query) {
+            //     return $query->withoutGlobalScopes([
+            //         SoftDeletingScope::class,
+            //     ]);
+            // })
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->sortable()
@@ -101,17 +104,22 @@ class ArticleResource extends Resource
                 Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
             ])
-            ->filters([  // Tambahkan filter di sini
-                SelectFilter::make('is_draft')
-                    ->label('Draft Status')
-                    ->options([
-                        '1' => 'Draft',  // 1 berarti Draft
-                        '0' => 'Published',  // 0 berarti Published
-                    ])
-            ])
+            ->filters(
+                [  // Tambahkan filter di sini
+                    // SelectFilter::make('is_draft')
+                    //     ->label('Draft Status')
+                    //     ->options([
+                    //         '1' => 'Draft',  // 1 berarti Draft
+                    //         '0' => 'Published',  // 0 berarti Published
+                    //     ])
+                    TrashedFilter::make(),
+                ],
+            )
             ->actions([
                 Tables\Actions\EditAction::make(),
-                DeleteAction::make() // Tombol Delete
+                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\ForceDeleteAction::make(), // Untuk hard delete
+                Tables\Actions\RestoreAction::make(), // Untuk restore soft deleted article
             ])
             ->bulkActions([
                 // Tables\Actions\DeleteBulkAction::make(),

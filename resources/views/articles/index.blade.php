@@ -92,7 +92,7 @@
                     @if ($articles->count() > 0)
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             @foreach ($articles as $article)
-                                <div class="flex flex-col    shadow">
+                                <div class="flex flex-col shadow-xl border border-gray-8">
                                     <!-- Gambar -->
                                     <div class="h-56 w-full">
                                         <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}"
@@ -101,7 +101,7 @@
                                     <!-- Konten -->
                                     <div class="p-4 flex flex-col">
                                         <!-- Judul -->
-                                        <h6 class="text-slate-800 text-lg font-semibold leading-snug">
+                                        <h6 class="text-slate-800 text-lg font-semibold leading-snug line-clamp-4">
                                             {{ $article->title }}
                                         </h6>
                                         <!-- Tanggal -->
@@ -110,8 +110,8 @@
                                             {{ number_format_short($article->view_count) }} views
                                         </p>
                                         <!-- Deskripsi -->
-                                        <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
-                                            {{ strip_tags($article->content) }}
+                                        <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2  line-clamp-4">
+                                            {{ \Illuminate\Support\Str::words(strip_tags($article->content), 20, '...') }}
                                         </p>
                                         <!-- Link Baca Selengkapnya -->
                                         <a href="{{ route('articles.show', $article->slug) }}"
@@ -193,7 +193,7 @@
                                 <img src="{{ asset('storage/' . ($popular->cover ? $popular->cover : 'covers/default/default.jpg')) }}"
                                     alt="{{ $popular->title }}" class="w-full h-full object-cover">
                             </div>
-                            <div class="w-full lg:w-2/3 pt-10">
+                            <div class="w-full lg:w-2/3">
                                 <h3 class="text-lg font-semibold text-slate-800 mb-1">
                                     {{ $popular->title }}
                                 </h3>
