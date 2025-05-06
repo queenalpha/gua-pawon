@@ -5,9 +5,9 @@
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner2.png') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
-            <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: Penelitian</h1>
+            <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: {{__('pages/journal.penelitian')}}</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
-                Temukan kisah manusia purba yang pernah hidup di Gua Pawon. Jelajahi sejarah, budaya, dan peninggalan arkeologi dalam satu platform edukatif.
+                {{__('pages/journal.temukan-kisah')}}
             </p>
         </div>
     </section>
@@ -16,7 +16,7 @@
         <form action="{{ route('journals.search') }}" method="GET" class="relative max-w-6xl w-full">
             <input name="query" value="{{ isset($query) ? $query : '' }}"
                 class="appearance-none border-2 pl-10 bg-[#F4F4F4] border-gray-300 hover:border-orange-900 transition-colors rounded-md w-full h-15 py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:ring-orange-900 focus:border-orange-600 focus:shadow-outline"
-                type="text" placeholder="Cari Penelitian Gua Pawon" />
+                type="text" placeholder="{{__('pages/journal.cari-penelitian')}}" />
 
             <div class="absolute right-0 inset-y-0 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-3 h-5 w-5 text-gray-400 hover:text-gray-500"
@@ -58,8 +58,8 @@
         @endforeach
         @if($journals->isEmpty())          
             <div class="text-center text-gray-500 my-15">
-                <p class="text-xl font-semibold">Tidak ada data jurnal yang ditemukan.</p>
-                <p class="text-sm">Coba kata kunci atau filter lain.</p>
+                <p class="text-xl font-semibold">{{__('pages/journal.tidak-ada-data')}}</p>
+                <p class="text-sm">{{__('pages/journal.coba-katakunci-lain')}}</p>
             </div>
         @endif
     </div>

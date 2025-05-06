@@ -26,6 +26,7 @@ return new class extends Migration
             $table->unsignedBigInteger('likes')->default(0);
             $table->boolean('is_draft')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
