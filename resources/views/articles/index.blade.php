@@ -106,8 +106,8 @@
                                         </h6>
                                         <!-- Tanggal -->
                                         <p class="text-sm text-gray-500 mt-2">
-                                            {{ \Carbon\Carbon::parse($article->created_at)->diffForHumans() }} · 
-                                            {{ number_format_short($article->view_count) }} views
+                                            {{ ($article->created_at)->diffForHumans() }} · 
+                                            {{ ($article->view_count) }} views
                                         </p>
                                         <!-- Deskripsi -->
                                         <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
@@ -135,7 +135,7 @@
                 @foreach ($categories as $category)
                 <div id="tab-{{ strtolower($category) }}" class="tab-content hidden">
                     @php
-                        $categoryArticles = $articles->where('category.category_name', $category);
+                    $categoryArticles = $articles->where('category.category_name', $category);
                     @endphp
 
                     @if ($categoryArticles->count() > 0)
@@ -149,8 +149,8 @@
                                     <div class="p-4 flex flex-col">
                                         <h6 class="text-slate-800 text-lg font-semibold leading-snug">{{ $article->title }}</h6>
                                         <p class="text-sm text-gray-500 mt-2">
-                                            {{ \Carbon\Carbon::parse($article->created_at)->diffForHumans() }} · 
-                                            {{ number_format_short($article->view_count) }} views
+                                            {{ ($article->created_at)->diffForHumans() }} · 
+                                            {{ ($article->view_count) }} views
                                         </p>
                                         <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
                                             {{ strip_tags($article->content) }}
@@ -193,16 +193,16 @@
                                 <img src="{{ asset('storage/' . ($popular->cover ? $popular->cover : 'covers/default/default.jpg')) }}"
                                     alt="{{ $popular->title }}" class="w-full h-full object-cover">
                             </div>
-                            <div class="w-full lg:w-2/3 pt-10">
-                                <h3 class="text-lg font-semibold text-slate-800 mb-1">
+                            <div class="w-full lg:w-2/3 p-4">
+                                <h3 class="text-lg font-semibold text-slate-800 mb-2">
                                     {{ $popular->title }}
                                 </h3>
-                                <p class="text-sm text-gray-500 mt-2">
-                                    {{ \Carbon\Carbon::parse($popular->created_at)->diffForHumans() }} · 
-                                    {{ number_format_short($popular->view_count) }} views
+                                <p class="text-sm text-gray-500 mb-2">
+                                    {{ ($popular->created_at)->diffForHumans() }} · 
+                                    {{ ($popular->view_count) }} views
                                 </p>
-                                <p class="text-slate-600 text-xs leading-relaxed mb-3">
-                                    {{ \Illuminate\Support\Str::limit(strip_tags($popular->content), 150, '...') }}
+                                <p class="text-slate-600 text-xs leading-relaxed mb-3 line-clamp-4">
+                                    {{ strip_tags($popular->content) }}
                                 </p>
                                 <a href="{{ route('articles.show', $popular->slug) }}"
                                     class="text-orange-500 text-xs font-semibold hover:underline inline-flex items-center gap-1">

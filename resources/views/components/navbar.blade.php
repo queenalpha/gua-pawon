@@ -86,7 +86,7 @@
                 
                 <li>
                     <a href="{{ route('articles.index') }}"
-                        class="text-gray-700 block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{{__('components/navbar.artikel')}}</a>
+                        class="text-gray-700 block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" target="_blank">{{__('components/navbar.artikel')}}</a>
                 </li>
 
                 <li>
@@ -148,7 +148,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
-        <a href="/articles" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
+        <a href="/articles" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700" target="_blank">
             <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.artikel')}}</span>
             <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
