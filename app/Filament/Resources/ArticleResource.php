@@ -30,26 +30,26 @@ class ArticleResource extends Resource
                 // Title
                 TextInput::make('title')
                     ->required()
-                    ->label('Title')
+                    ->label('Judul')
                     ->columnSpan(2)
                     ->placeholder('Masukkan judul'),
 
                 // Kategori
                 Select::make('id_categories')
-                    ->label('Categories')
+                    ->label('Kategori')
                     ->placeholder('Pilih Kategori')
                     ->relationship('category', 'category_name')
-                    ->live()
-                    ->createOptionForm([
-                        TextInput::make('category_name')
-                            ->required()
-                            ->label('New Category Name'),
-                    ])
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        if ($state) {
-                            $set('id_categories', $state);
-                        }
-                    })
+                    // ->live()
+                    // ->createOptionForm([
+                    //     TextInput::make('category_name')
+                    //         ->required()
+                    //         ->label('New Category Name'),
+                    // ])
+                    // ->afterStateUpdated(function ($state, callable $set) {
+                    //     if ($state) {
+                    //         $set('id_categories', $state);
+                    //     }
+                    // })
                     ->required()
                     ->columnSpan(2), // Lebar lebih besar
 
@@ -60,7 +60,7 @@ class ArticleResource extends Resource
                     ->previewable(true)
                     ->disk('public')
                     ->directory('covers')
-                    ->label('Cover')
+                    ->label('Cover Foto')
                     ->hint('Recommended size: 1200 x 400 px, JPG or PNG.')
                     ->helperText('Max size: 5MB.')
                     ->imageResizeMode('cover')
@@ -74,7 +74,7 @@ class ArticleResource extends Resource
 
                 // Content (Membuat lebih besar)
                 RichEditor::make('content')
-                    ->label('Content')
+                    ->label('Konten')
                     ->fileAttachmentsDisk('public')
                     ->fileAttachmentsDirectory('image-article')
                     ->fileAttachmentsVisibility('public')

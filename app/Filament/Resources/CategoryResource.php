@@ -31,6 +31,7 @@ class CategoryResource extends Resource
                 TextInput::make('category_name')
                     ->required()
                     ->label('Nama Kategori')
+                    ->placeholder('Masukkan Nama Kategori')
                     ->columnSpan(2),
             ]);
     }
