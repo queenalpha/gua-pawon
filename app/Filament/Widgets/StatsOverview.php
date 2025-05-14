@@ -21,10 +21,5 @@ class StatsOverview extends BaseWidget
             Stat::make('Post', $articleCount),
             Stat::make('Inbox', $contactCount),
         ];
-        return [
-            Stat::make('Unique views', '192.1k'),
-            Stat::make('Bounce rate', '21%'),
-            Stat::make('Average time on page', '3:12'),
-        ];
     }
 }

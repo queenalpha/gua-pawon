@@ -5,14 +5,15 @@ namespace App\Filament\Resources\ArticleResource\Pages;
 use App\Filament\Resources\ArticleResource;
 use Filament\Resources\Pages\CreateRecord;
 use Filament\Notifications\Notification;
-use Filament\Actions;
 use Filament\Forms\Form;
-use Filament\Actions\CreateAction;
+use Filament\Actions\Action;
 use Illuminate\Support\Str;
 
 class CreateArticle extends CreateRecord
 {
     protected static string $resource = ArticleResource::class;
+
+    public bool $saveAsDraft = false;
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
@@ -34,7 +35,6 @@ class CreateArticle extends CreateRecord
         return $data;
     }
 
-    public bool $saveAsDraft = false;
 
     public function form(Form $form): Form
     {
@@ -45,25 +45,28 @@ class CreateArticle extends CreateRecord
     {
         return parent::getCreateFormAction()
             ->label('Publish')
+            ->icon('heroicon-o-paper-airplane') 
+            ->color('gray')
             ->successRedirectUrl(ArticleResource::getUrl());
     }
 
-    protected function getHeaderActions(): array
+    protected function getFormActions(): array
     {
         return [
-            Actions\Action::make('saveAsDraft')
-                ->label('Simpan ke Draft')  // Label tombol
-                ->action(function () {
-                    $this->saveAsDraft = true;
-                    $this->create();
-                    Notification::make()
-                        ->title('Draft Berhasil Disimpan')
-                        ->success()  // Menandakan bahwa ini adalah notifikasi sukses
-                        ->send();
-                })
-                ->color('primary')  // Mengubah warna tombol
-                ->size('lg')  // Ukuran tombol lebih besar
-                ->tooltip('Simpan artikel sebagai draft')  // Tooltip saat hover di tombol
+            Action::make('saveAsDraft')
+            ->label('Simpan ke Draft')
+            ->action(function () {
+                $this->saveAsDraft = true;
+                $this->create();
+                Notification::make()
+                ->title('Draft Berhasil Disimpan')
+                ->success()
+                ->send();
+            })
+            ->color('gray')
+            ->icon('heroicon-o-pencil')
+            ->requiresConfirmation(false),
+            $this->getCreateFormAction() // Publish button
         ];
     }
 }
