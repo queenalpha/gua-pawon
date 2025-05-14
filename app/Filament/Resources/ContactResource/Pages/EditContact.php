@@ -3,27 +3,43 @@
 namespace App\Filament\Resources\ContactResource\Pages;
 
 use App\Filament\Resources\ContactResource;
+use App\Mail\ContactReply;
 use App\Models\Contact;
 use Filament\Resources\Pages\EditRecord;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
+use Filament\Notifications\Notification;
+use Filament\Forms\Form;
 use Filament\Actions\Action;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
-use App\Mail\ContactReply;
 
 class EditContact extends EditRecord
 {
     protected static string $resource = ContactResource::class;
 
-    protected function getActions(): array
+    public function form(Form $form): Form
+    {
+        return parent::form($form);
+    }
+
+    protected function getFormActions(): array
     {
         return [
             Action::make('send_reply')
-                ->label('Send Reply')
+                ->label('Kirim Balasan')
+                ->icon('heroicon-o-paper-airplane')
+                ->color('primary')
+                ->requiresConfirmation()
                 ->action(function () {
                     $contact = $this->record;
                     $replyMessage = $this->form->getState()['reply'];
+
+                    if (!$replyMessage) {
+                        Notification::make()
+                            ->title('Balasan tidak boleh kosong.')
+                            ->danger()
+                            ->send();
+                        return;
+                    }
 
                     $replyData = [
                         'reply' => $replyMessage,
@@ -31,17 +47,21 @@ class EditContact extends EditRecord
                         'subject' => Str::title($contact->subject),
                     ];
 
-                    // Kirim email ke pengirim kontak dengan balasan
+                    // Kirim email
                     Mail::to($contact->email)->send(new ContactReply($replyData));
 
-                    // Setelah mengirim email, set status kontak ke "Replied" dan simpan perubahan
+                    // Update status dan simpan
                     $contact->is_answer = true;
                     $contact->reply = $replyMessage;
                     $contact->save();
 
-                    return redirect('/admin/contacts');
-                })
-                ->color('primary'),
+                    Notification::make()
+                        ->title('Balasan berhasil dikirim.')
+                        ->success()
+                        ->send();
+
+                    $this->redirect(ContactResource::getUrl());
+                }),
         ];
     }
 }

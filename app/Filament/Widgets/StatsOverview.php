@@ -17,9 +17,9 @@ class StatsOverview extends BaseWidget
         $contactCount = Contact::where('is_answer', false)->count();
 
         return [
-            Stat::make('Research', $researchCount),
-            Stat::make('Post', $articleCount),
-            Stat::make('Inbox', $contactCount),
+            Stat::make('Jurnal', $researchCount),
+            Stat::make('Postingan', $articleCount),
+            Stat::make('Pesan', $contactCount),
         ];
     }
 }

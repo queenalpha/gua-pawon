@@ -45,8 +45,8 @@ class CreateArticle extends CreateRecord
     {
         return parent::getCreateFormAction()
             ->label('Publish')
-            ->icon('heroicon-o-paper-airplane') 
-            ->color('gray')
+            ->icon('heroicon-o-paper-airplane')
+            ->color('success')
             ->successRedirectUrl(ArticleResource::getUrl());
     }
 
@@ -54,18 +54,18 @@ class CreateArticle extends CreateRecord
     {
         return [
             Action::make('saveAsDraft')
-            ->label('Simpan ke Draft')
-            ->action(function () {
-                $this->saveAsDraft = true;
-                $this->create();
-                Notification::make()
-                ->title('Draft Berhasil Disimpan')
-                ->success()
-                ->send();
-            })
-            ->color('gray')
-            ->icon('heroicon-o-pencil')
-            ->requiresConfirmation(false),
+                ->label('Simpan ke Draft')
+                ->action(function () {
+                    $this->saveAsDraft = true;
+                    $this->create();
+                    Notification::make()
+                        ->title('Draft Berhasil Disimpan')
+                        ->success()
+                        ->send();
+                })
+                ->color('warning')
+                ->icon('heroicon-o-pencil')
+                ->requiresConfirmation(false),
             $this->getCreateFormAction() // Publish button
         ];
     }

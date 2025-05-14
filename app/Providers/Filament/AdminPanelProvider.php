@@ -46,6 +46,7 @@ class AdminPanelProvider extends PanelProvider
                 StatsOverview::class,
                 ArticleTable::class,
             ])
+            ->spa()
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,

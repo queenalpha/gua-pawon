@@ -19,7 +19,9 @@ class ArticleResource extends Resource
 {
     protected static ?string $model = Article::class;
     protected static ?string $navigationIcon = 'heroicon-o-magnifying-glass';
-    protected static ?string $navigationLabel = 'Articles';
+    protected static ?string $pluralModelLabel = 'Postingan';
+    protected static ?string $modelLabel = 'Postingan';
+    protected static ?string $navigationLabel = 'Postingan';
 
     public static function form(Form $form): Form
     {
@@ -94,15 +96,15 @@ class ArticleResource extends Resource
             // })
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->sortable()
+                    ->label('Judul')
                     ->searchable()
                     ->limit(50),
                 // Tables\Columns\TextColumn::make('content'),
-                Tables\Columns\TextColumn::make('category.category_name')->label('Category')->searchable()->sortable(),
+                Tables\Columns\TextColumn::make('category.category_name')->label('Category')->searchable()->sortable()->label('Kategori'),
                 // Tables\Columns\IconColumn::make('is_draft')->boolean()->label('Draft?'),
-                Tables\Columns\TextColumn::make('view_count')->label('Views')->sortable(),
-                Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable(),
-                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
+                Tables\Columns\TextColumn::make('view_count')->label('Views')->label('Dilihat')->sortable(),
+                Tables\Columns\TextColumn::make('likes')->label('Likes')->label('Disukai')->sortable(),
+                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable()->label('Tgl. Dibuat'),
             ])
             ->filters([
                 // Filter untuk Draft (is_draft)

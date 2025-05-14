@@ -18,6 +18,9 @@ use App\Filament\Resources\CategoryResource\RelationManagers;
 class CategoryResource extends Resource
 {
     protected static ?string $model = Category::class;
+    protected static ?string $pluralModelLabel = 'Kategori';
+    protected static ?string $modelLabel = 'Kategori';
+    protected static ?string $navigationLabel = 'Kategori';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -37,9 +40,7 @@ class CategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('category_name')
-                    ->label('Category Name')
-                    ->sortable()
-                    ->searchable(),
+                    ->label('Jenis Kategori')
             ])
             ->actions([
                 // Tables\Actions\EditAction::make(),  // Tombol Edit

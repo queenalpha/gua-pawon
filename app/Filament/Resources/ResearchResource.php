@@ -16,7 +16,9 @@ class ResearchResource extends Resource
 {
     protected static ?string $model = Research::class;
     protected static ?string $navigationIcon = 'heroicon-o-document-magnifying-glass';
-    protected static ?string $navigationLabel = 'Research';
+    protected static ?string $pluralModelLabel = 'Jurnal';
+    protected static ?string $modelLabel = 'Jurnal';
+    protected static ?string $navigationLabel = 'Jurnal';
 
     public static function form(Form $form): Form
     {
@@ -48,10 +50,10 @@ class ResearchResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')->searchable()->limit(50),
-                Tables\Columns\TextColumn::make('author')->searchable()->limit(30),
-                Tables\Columns\TextColumn::make('publish_date')->date()->sortable(),
-                Tables\Columns\TextColumn::make('url_doi')->label('DOI URL')->searchable(),
+                Tables\Columns\TextColumn::make('title')->label('Judul')->searchable()->limit(50)->sortable(),
+                Tables\Columns\TextColumn::make('author')->label('Penulis')->searchable()->limit(30)->sortable(),
+                Tables\Columns\TextColumn::make('publish_date')->label('Tgl. Publish')->date()->sortable(),
+                Tables\Columns\TextColumn::make('url_doi')->label('Link DOI')->searchable(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

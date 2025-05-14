@@ -20,13 +20,14 @@ class ArticleTable extends BaseWidget
     {
         return [
             Tables\Columns\TextColumn::make('title')
-                    ->sortable()
-                    ->searchable()
-                    ->limit(50),
-                Tables\Columns\TextColumn::make('category.category_name')->label('Category')->searchable()->sortable(),
-                Tables\Columns\TextColumn::make('view_count')->label('Views')->sortable(),
-                Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable(),
-                Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable(),
+                ->label('Judul')
+                ->sortable()
+                ->searchable()
+                ->limit(50),
+            Tables\Columns\TextColumn::make('category.category_name')->label('Kategori')->searchable()->sortable(),
+            Tables\Columns\TextColumn::make('view_count')->label('Views')->sortable()->label('Dilihat'),
+            Tables\Columns\TextColumn::make('likes')->label('Likes')->sortable()->label('Disukai'),
+            Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable()->label('Tgl. Dibuat'),
         ];
     }
 }

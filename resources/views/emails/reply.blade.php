@@ -38,6 +38,7 @@
     <div class="email-container">
         <h2>Balasan dari Tim Gua Pawon</h2>
         <p>Halo Yth. {{ $name }}.</p>
+        <p>Berikut jawaban terkait pertanyaan Anda:</p>
         <p>{{ $reply }}</p>
 
         <p>Salam hormat,<br><strong>Admin Gua Pawon</strong></p>
