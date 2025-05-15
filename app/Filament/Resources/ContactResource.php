@@ -4,10 +4,6 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ContactResource\Pages;
 use App\Models\Contact;
-use Filament\Icons\Icon;
-use Filament\Forms;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactReply;
 use Filament\Forms\Components\{TextInput, Textarea, Toggle};
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -75,5 +71,9 @@ class ContactResource extends Resource
             'create' => Pages\CreateContact::route('/create'),
             'edit' => Pages\EditContact::route('/{record}/edit'),
         ];
+    }
+    public static function canCreate(): bool
+    {
+        return false;
     }
 }

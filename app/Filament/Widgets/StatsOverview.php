@@ -10,6 +10,7 @@ use App\Models\Contact;
 
 class StatsOverview extends BaseWidget
 {
+    protected ?string $heading = 'Statistik';
     protected function getStats(): array
     {
         $articleCount = Article::where('is_draft', false)->count();

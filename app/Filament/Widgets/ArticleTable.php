@@ -11,6 +11,11 @@ class ArticleTable extends BaseWidget
 {
     protected int|string|array $columnSpan = 'full';
 
+    protected function getTableHeading(): string
+    {
+        return 'Daftar Postingan';
+    }
+
     protected function getTableQuery(): Builder
     {
         return Article::query()->latest()->where('is_draft', false);

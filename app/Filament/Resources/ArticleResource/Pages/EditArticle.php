@@ -57,6 +57,11 @@ class EditArticle extends EditRecord
     protected function getFormActions(): array
     {
         return [
+            Action::make('back')
+                ->label('Kembali')
+                ->url(ArticleResource::getUrl())
+                ->icon('heroicon-o-arrow-left')
+                ->color('gray'),
             Action::make('saveAsDraft')
                 ->label('Simpan ke Draft')
                 ->action(function () {
