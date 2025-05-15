@@ -23,6 +23,7 @@ class ContactReply extends Mailable
             ->with([
                 'reply' => $this->replyData['reply'],  // Mengirim data balasan
                 'name' => $this->replyData['name'],    // Nama pengirim
+                'message_text' => $this->replyData['message_text'], // Pesan pengirim
             ]);
     }
 }

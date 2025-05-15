@@ -1,35 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reply for {{ $name }}</title>
+    <title>Balasan untuk {{ $name }}</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5;
             margin: 0;
             padding: 0;
         }
         .email-container {
             background-color: #ffffff;
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         h2 {
-            color: #333;
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
         }
         p {
+            color: #444;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            font-style: italic;
             color: #555;
-            line-height: 1.6;
+        }
+        .reply-box {
+            background-color: #eaf4ff;
+            border: 1px solid #cce0f5;
+            padding: 20px;
+            border-radius: 6px;
+            color: #333;
+        }
+        .signature {
+            margin-top: 40px;
+            font-weight: 500;
         }
         .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #999;
+            margin-top: 50px;
+            font-size: 13px;
+            color: #aaa;
             text-align: center;
         }
     </style>
@@ -37,14 +66,23 @@
 <body>
     <div class="email-container">
         <h2>Balasan dari Tim Gua Pawon</h2>
-        <p>Halo Yth. {{ $name }}.</p>
-        <p>Berikut jawaban terkait pertanyaan Anda:</p>
-        <p>{{ $reply }}</p>
 
-        <p>Salam hormat,<br><strong>Admin Gua Pawon</strong></p>
+        <p>Halo Yth. <strong>{{ $name }}</strong>,</p>
+
+        <p class="section-title">Pertanyaan Anda:</p>
+        <div class="quote-box">
+            {{ $message_text }}
+        </div>
+
+        <p class="section-title">Jawaban Kami:</p>
+        <div class="reply-box">
+            {{ $reply }}
+        </div>
+
+        <p class="signature">Salam hormat,<br><strong>Admin Gua Pawon</strong></p>
 
         <div class="footer">
-            &copy; {{ date('Y') }} Gua Pawon. Semua hak dilindungi.
+            &copy; {{ date('Y') }} Gua Pawon. All rights reserved.
         </div>
     </div>
 </body>

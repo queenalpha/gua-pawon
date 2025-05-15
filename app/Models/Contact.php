@@ -24,11 +24,4 @@ class Contact extends Model
         'is_answer',
         'reply'
     ];
-
-    // Method to send a reply via email
-    public function sendReply($replyMessage)
-    {
-        // Here you can send an email to the user who contacted you
-        // You could use Laravel's Mail functionality or any custom email logic here
-    }
 }

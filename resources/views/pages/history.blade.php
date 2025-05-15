@@ -5,14 +5,14 @@
         style="background-image: url('{{ Vite::asset('../resources/img/banner2.png') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: {{__('pages/history.sejarah-gua')}}</h1>
-            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">{{__('pages/history.deskripsi-1')}}
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl" id="sejarah">{{__('pages/history.deskripsi-1')}}
                 <br/> 
                 {{__('pages/history.deskripsi-2')}}
             </p>
         </div>
     </section>
 
-    <div class="max-w-6xl mx-auto px-4 py-12" id="Sejarah">
+    <div class="max-w-6xl mx-auto px-4 py-12">
         <div class="border-[#D8CC6C] border-l-[5px] pl-5">
             <h2 class="text-dark mb-2 text-2xl font-semibold mb-3">
                 {{__('pages/history.sejarah-awal')}}
@@ -37,13 +37,13 @@
                 <h3 class="text-white text-lg border-b border-gray-300 pb-2 mb-4 bg-[#1A1006] px-3 py-2">{{__('pages/history.indeks')}}</h3>
                 <ul class="space-y-3 text-black px-3">
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Sejarah" class="flex items-center">{{__('pages/history.sejarah')}}</a>
+                        <a href="#sejarah" class="flex items-center">{{__('pages/history.sejarah')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Timeline" class="flex items-center">Timeline</a>
+                        <a href="#timeline" class="flex items-center">Timeline</a>
                     </li>
-                    <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#" class="flex items-center">{{__('pages/history.sekitar-gua')}}</a>
+                    <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer" id="timeline">
+                        <a href="#keseluruhan" class="flex items-center">{{__('pages/history.keseluruhan')}}</a>
                     </li>
                 </ul>
             </div>
@@ -157,7 +157,7 @@
                 </p>
             </div>
 
-            <div class="font-medium flex justify-center gap-2 mt-6">
+            <div class="font-medium flex justify-center gap-2 mt-6" id="keseluruhan">
                 <div class="flex items-center">
                     <img src="{{Vite::asset('../resources/img/Logo-pawon.png')}}" alt="logo-pawon" class="w-4 h-4">
                     <span class="ms-2">Gua Pawon</span>

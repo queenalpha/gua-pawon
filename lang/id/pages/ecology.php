@@ -4,8 +4,8 @@ return [
     'temukan-kisah-1' => 'Temukan kisah manusia purba yang pernah hidup
                 di Gua Pawon.',
     'temukan-kisah-2' => 'Jelajahi sejarah, budaya, dan peninggalan arkeologi.',
-    'peta-geologi' => 'Peta Geologi',
-    'peta-disamping' => 'Peta geologi di samping menunjukkan kondisi geologi daerah Citatah, Bandung Barat, dan sekitarnya,
+    'peta-pawon' => 'Peta Gua Pawon',
+    'peta-disamping' => 'Peta di samping menunjukkan kondisi daerah Citatah, Bandung Barat, dan sekitarnya,
                     termasuk lokasi
                     Lintasan Gua Pawon. Berdasarkan peta ini, Gua Pawon terletak dalam Formasi Rajamandala yang tersusun
                     atas batugamping.

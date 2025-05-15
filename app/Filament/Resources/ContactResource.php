@@ -21,12 +21,12 @@ class ContactResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
-            TextInput::make('name')->required()->label('Nama')->disabled(),
-            TextInput::make('email')->required()->email()->label('Email')->disabled(),
-            TextInput::make('telp')->label('No. Telp')->maxLength(15)->disabled(),
-            Textarea::make('subject')->required()->label('Subject')->disabled(),
+            TextInput::make('name')->label('Nama')->readOnly(),
+            TextInput::make('email')->email()->label('Email')->readOnly(),
+            TextInput::make('telp')->label('No. Telp')->maxLength(15)->readOnly(),
+            Textarea::make('subject')->label('Subject')->readOnly(),
             Toggle::make('is_answer')->default(false)->hidden(),
-            Textarea::make('messages')->required()->label('Pesan Pertanyaan')->disabled()->rows(6),
+            Textarea::make('messages')->label('Pesan Pertanyaan')->readOnly()->rows(6),
             Textarea::make('reply')
                 ->label('Balasan')
                 ->placeholder('Tulis jawaban terkait pertanyaan tersebut...')
@@ -69,7 +69,7 @@ class ContactResource extends Resource
         return [
             'index' => Pages\ListContacts::route('/'),
             'create' => Pages\CreateContact::route('/create'),
-            'edit' => Pages\EditContact::route('/{record}/edit'),
+            'edit' => Pages\EditContact::route('/{record}/reply'),
         ];
     }
     public static function canCreate(): bool

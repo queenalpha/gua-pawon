@@ -32,6 +32,7 @@ class EditContact extends EditRecord
                 ->action(function () {
                     $contact = $this->record;
                     $replyMessage = $this->form->getState()['reply'];
+                    $message_text = $this->form->getState()['messages'];
 
                     if (!$replyMessage) {
                         Notification::make()
@@ -45,6 +46,7 @@ class EditContact extends EditRecord
                         'reply' => $replyMessage,
                         'name' => Str::title($contact->name),
                         'subject' => Str::title($contact->subject),
+                        'message_text' => $message_text
                     ];
 
                     // Kirim email

@@ -5,17 +5,17 @@
         style="background-image: url('{{ Vite::asset('../resources/img/banner2.png') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: {{__('pages/ecology.ekologi-geologi')}}</h1>
-            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">{{__('pages/ecology.temukan-kisah-1')}}
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl" id="peta-geologi">{{__('pages/ecology.temukan-kisah-1')}}
                 <br/>{{__('pages/ecology.temukan-kisah-2')}}</p>
         </div>
     </section>
 
     {{-- Peta Geologi --}}
-    <div class="max-w-6xl mx-auto px-4 py-10" id="Peta-geplogi">
+    <div class="max-w-6xl mx-auto px-4 py-10">
         <div class="space-y-4-px-4">
             <div class="border-[#D8CC6C] border-l-[5px] pl-5">
                 <h2 class="text-dark mb-2 text-2xl font-semibold mb-3">
-                    {{__('pages/ecology.peta-geologi')}}
+                    {{__('pages/ecology.peta-pawon')}}
                 </h2>
             </div>
         </div>
@@ -43,16 +43,16 @@
                 <h3 class="text-white text-lg border-b border-gray-300 pb-2 mb-4 bg-[#1A1006] px-3 py-2">{{__('pages/ecology.indeks')}}</h3>
                 <ul class="space-y-3 text-black px-3">
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Peta-geologi" class="flex items-center">{{__('pages/ecology.peta-geologi')}}</a>
+                        <a href="#peta-geologi" class="flex items-center">{{__('pages/ecology.peta-pawon')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Flora" class="flex items-center">Flora</a>
+                        <a href="#flora" class="flex items-center">Flora</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Fauan" class="flex items-center">Fauna</a>
+                        <a href="#fauna" class="flex items-center">Fauna</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Folklore" class="flex items-center">{{__('pages/ecology.cerita-rakyat')}}</a>
+                        <a href="#cerita-rakyat" class="flex items-center">{{__('pages/ecology.cerita-rakyat')}}</a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +62,7 @@
 
     {{-- flora --}}
 
-    <div class="max-w-full container-lg w-full px-4 bg-[#1e1109]" id="Flora">
+    <div class="max-w-full container-lg w-full px-4 bg-[#1e1109]" id="flora">
         <h3 class="text-2xl md:text-3xl font-bold text-center mb-6 text-white gap-36 pt-18">{{__('pages/ecology.flora-gua')}}</h3>
         <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
             <div class="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
@@ -386,7 +386,7 @@
 
 
         {{-- Fauna --}}
-        <h3 class="text-2xl md:text-3xl font-bold text-center mb-6 text-white gap-36 pt-18">{{__('pages/ecology.fauna-gua')}}</h3>
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-6 text-white gap-36 pt-18" id="fauna">{{__('pages/ecology.fauna-gua')}}</h3>
         <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
             <div class="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-5">
 
@@ -744,7 +744,7 @@
                     class="flex items-center justify-between w-full p-5 font-medium text-left text-white border-b-2 border-white-100"
                     data-accordion-target="#accordion-collapse-body-10" aria-expanded="false"
                     aria-controls="accordion-collapse-body-10">
-                    <span> {{__('pages/ecology.laba-gua')}} (Troglobiont Spiders)</span>
+                    <span id="cerita-rakyat"> {{__('pages/ecology.laba-gua')}} (Troglobiont Spiders)</span>
                     <svg data-accordion-icon class="w-4 h-4 rotate-90 shrink-0 transition-transform duration-300"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -774,7 +774,7 @@
 
     {{-- Folklore --}}
 
-    <div class="max-w-6xl mx-auto px-4" id="Folklore">
+    <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-10">
             <div class="space-y-4 px-4">
                 <div class="border-[#D8CC6C] border-l-[5px] pl-5">

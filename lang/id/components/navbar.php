@@ -7,7 +7,7 @@ return [
     'tutup-menu' => 'Tutup Menu',
     'beranda' => 'Beranda',
     'sejarah' => 'Sejarah',
-    'ekologi-geologi' => 'Ecologi dan Geologi',
+    'ekologi-geologi' => 'Ekologi dan Geologi',
     'penelitian' => 'Penelitian',
     'upaya-konservasi' => 'Upaya Konservasi'
 ];
