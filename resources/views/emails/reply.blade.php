@@ -44,12 +44,14 @@
             font-style: italic;
             color: #555;
         }
-        .reply-box {
-            background-color: #eaf4ff;
-            border: 1px solid #cce0f5;
-            padding: 20px;
-            border-radius: 6px;
-            color: #333;
+        .quote-box-right {
+            background-color: #f8f9fa;
+            border-right: 5px solid #3498db;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            font-style: italic;
+            color: #555;
+            text-align: left;
         }
         .signature {
             margin-top: 40px;
@@ -75,14 +77,14 @@
         </div>
 
         <p class="section-title">Jawaban Kami:</p>
-        <div class="reply-box">
+        <div class="quote-box-right">
             {{ $reply }}
         </div>
 
         <p class="signature">Salam hormat,<br><strong>Admin Gua Pawon</strong></p>
 
         <div class="footer">
-            &copy; {{ date('Y') }} Gua Pawon. All rights reserved.
+            &copy; {{ date('Y') }} Gua Pawon. Semua hak dilindungi.
         </div>
     </div>
 </body>
