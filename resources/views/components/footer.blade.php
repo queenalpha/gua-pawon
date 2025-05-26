@@ -36,9 +36,9 @@
             </div>
 
             <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase">Contact</h2>
+                <h2 class="mb-6 text-sm font-semibold uppercase">Kontak</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="#" class="hover:underline">Form</a></li>
+                    <li class="mb-2"><a href="#" class="hover:underline">Kontak</a></li>
                 </ul>
             </div>
         </div>

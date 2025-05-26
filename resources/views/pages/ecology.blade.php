@@ -420,7 +420,7 @@
                                 </p>
                                 <div class="grid grid-cols-3 gap-4 text-sm">
                                     <div>
-                                        <p class="font-semibold">{{__('pages/ecology.panjang')}}</p>
+                                        <p class="font-semibold">{{__('pages/ecology.tinggi')}}</p>
                                         <p>30–38 cm</p>
                                     </div>
                                     <div>
@@ -467,7 +467,7 @@
                                 </p>
                                 <div class="grid grid-cols-3 gap-4 text-sm">
                                     <div>
-                                        <p class="font-semibold">{{__('pages/ecology.panjang')}}</p>
+                                        <p class="font-semibold">{{__('pages/ecology.tinggi')}}</p>
                                         <p>25 - 50 cm</p>
                                     </div>
                                     <div>
@@ -514,7 +514,7 @@
                                 </p>
                                 <div class="grid grid-cols-3 gap-4 text-sm">
                                     <div>
-                                        <p class="font-semibold">{{__('pages/ecology.panjang')}}</p>
+                                        <p class="font-semibold">{{__('pages/ecology.tinggi')}}</p>
                                         <p>40 - 60 cm</p>
                                     </div>
                                     <div>
@@ -561,7 +561,7 @@
                                 </p>
                                 <div class="grid grid-cols-3 gap-4 text-sm">
                                     <div>
-                                        <p class="font-semibold">{{__('pages/ecology.panjang')}}</p>
+                                        <p class="font-semibold">{{__('pages/ecology.tinggi')}}</p>
                                         <p>10 - 20 cm</p>
                                     </div>
                                     <div>
