@@ -40,7 +40,11 @@
 
             <div class="flex-1 space-y-6 order-1">
                 <div class="prose prose-lg max-w-none text-justify px-4 md:px-0">
-                    {!! str($article->content)->sanitizeHtml() !!}
+                    {!! str($article->content)
+                    ->replaceMatches('/<figcaption[^>]*>.*?<\/figcaption>/is', '') // hapus figcaption
+                    ->replace('<img', '<img style="width: 50%; height: auto;"') //ubah lebar menjadi 50%
+                    ->replaceMatches('/<a[^>]*>\s*(<img[^>]+>)\s*<\/a>/i', '$1') // hilanngkan href pada gambar
+                    ->sanitizeHtml() !!}
                 </div>
             </div>
         </div>
