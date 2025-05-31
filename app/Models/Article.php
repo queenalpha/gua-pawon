@@ -38,10 +38,10 @@ class Article extends Model
             static::cleanupUnusedImages($article);
         });
 
-        static::deleting(function ($article) {
+        // Hapus file hanya saat hard delete (forceDelete)
+        static::forceDeleted(function ($article) {
             static::deleteAllImages($article);
 
-            // Hapus cover
             if ($article->cover && Storage::disk('public')->exists($article->cover)) {
                 Storage::disk('public')->delete($article->cover);
             }
