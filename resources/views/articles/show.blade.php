@@ -42,9 +42,9 @@
                 <div class="prose prose-lg max-w-none text-justify px-4 md:px-0">
                     {!! str($article->content)
                     ->replaceMatches('/<figcaption[^>]*>.*?<\/figcaption>/is', '') // hapus figcaption
-                    ->replace('<img', '<img style="width: 50%; height: auto;"') //ubah lebar menjadi 50%
+                    ->replace('<img', '<img style="width: 50%; height: auto; margin: 2rem auto; display: block;"') //ubah lebar menjadi 50%
                     ->replaceMatches('/<a[^>]*>\s*(<img[^>]+>)\s*<\/a>/i', '$1') // hilanngkan href pada gambar
-                    ->sanitizeHtml() !!}
+                    !!}
                 </div>
             </div>
         </div>

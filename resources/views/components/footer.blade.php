@@ -53,7 +53,7 @@
 
         <div class="px-4 py-6 md:flex md:items-center md:justify-center bg-[#1e1109]">
             <span class="text-sm text-gray-300 text-center">© 2025 <strong>PHASE™</strong> | Balai Pelestarian Jawa
-                Barat Wilayah IX</span>
+                Barat Wilayah IX | Intitut Teknologi Nasional Bandung</span>
         </div>
     </div>
 </footer>

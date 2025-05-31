@@ -62,13 +62,13 @@ class ArticleResource extends Resource
                     ->disk('public')
                     ->directory('covers')
                     ->label('Cover Foto')
-                    ->hint('Recommended size: 1200 x 400 px, JPG or PNG.')
-                    ->helperText('Max size: 5MB.')
+                    ->hint('Ukuran yang direkomendasikan: 1200 x 400 px (JPG atau PNG)')
+                    ->helperText('Maks. file: 5MB.')
                     ->imageResizeMode('cover')
                     ->imageCropAspectRatio('3:1')
                     ->imageResizeTargetWidth(1200)
                     ->imageResizeTargetHeight(400)
-                    ->maxSize(5120) // Max size = 5MB
+                    ->maxSize(5000) // Max size = 5MB
                     ->acceptedFileTypes(['image/jpeg', 'image/png'])
                     ->nullable()
                     ->columnSpan(2), // Lebar lebih besar
