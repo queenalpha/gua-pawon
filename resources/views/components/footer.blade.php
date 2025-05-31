@@ -21,9 +21,12 @@
             </div>
 
             <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.penelitian')}}</h2>
+                <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.penelitian')}} & {{__('articles/index.artikel')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="/journal" class="hover:underline">{{__('components/footer.penelitian-terkait')}}</a></li>
+                    <li class="mb-2"><a href="/journal" class="hover:underline">{{__('components/footer.penelitian-terkait')}}</a>
+                    </li>
+                    <li class="mb-2"><a href="/articles" class="hover:underline">{{ ucwords(__('articles/index.artikel')) }}</a>
+                    </li>
                 </ul>
             </div>
 

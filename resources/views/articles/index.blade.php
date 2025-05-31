@@ -1,7 +1,5 @@
 @extends('layouts.app')
-@section('title')
-    {{__('articles/index.judul')}}
-@endsection
+@section('title', "Gua Pawon - " . __('articles/index.judul'))
 
 @section('artikel')
     <div class="max-w-6xl mx-auto px-4 pt-12">
@@ -106,7 +104,7 @@
                                         </h6>
                                         <!-- Tanggal -->
                                         <p class="text-sm text-gray-500 mt-2">
-                                            {{ ($article->created_at)->diffForHumans() }} · 
+                                            {{ ($article->created_at)->diffForHumans() }} ·
                                             {{ ($article->view_count) }} views
                                         </p>
                                         <!-- Deskripsi -->
@@ -149,13 +147,13 @@
                                     <div class="p-4 flex flex-col">
                                         <h6 class="text-slate-800 text-lg font-semibold leading-snug">{{ $article->title }}</h6>
                                         <p class="text-sm text-gray-500 mt-2">
-                                            {{ ($article->created_at)->diffForHumans() }} · 
+                                            {{ ($article->created_at)->diffForHumans() }} ·
                                             {{ ($article->view_count) }} views
                                         </p>
                                         <p class="text-slate-600 text-sm leading-normal line-clamp-4 mt-2">
                                             {{ strip_tags($article->content) }}
                                         </p>
-                                        <a href="{{ route('articles.show', $article->slug) }}" 
+                                        <a href="{{ route('articles.show', $article->slug) }}"
                                             class="text-red-500 text-sm font-semibold hover:underline flex items-center gap-1 mt-2">
                                             {{__('articles/index.selengkapnya')}}
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
@@ -198,7 +196,7 @@
                                     {{ $popular->title }}
                                 </h3>
                                 <p class="text-sm text-gray-500 mb-2">
-                                    {{ ($popular->created_at)->diffForHumans() }} · 
+                                    {{ ($popular->created_at)->diffForHumans() }} ·
                                     {{ ($popular->view_count) }} views
                                 </p>
                                 <p class="text-slate-600 text-xs leading-relaxed mb-3 line-clamp-4">

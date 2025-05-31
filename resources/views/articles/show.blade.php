@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', $article->title)
+@section('title', ucwords(__('articles/index.artikel')) . " - ". $article->title)
 
 @section('artikel-konten')
         <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}"

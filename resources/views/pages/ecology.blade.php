@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', "Gua Pawon - " . __('pages/ecology.ekologi-geologi'))
 
 @section('ecology')
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"

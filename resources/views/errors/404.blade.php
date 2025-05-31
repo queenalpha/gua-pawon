@@ -1,6 +1,6 @@
 @extends('layouts.app') {{-- Sesuaikan layout kamu --}}
 
-@section('title', 'Halaman Tidak Ditemukan')
+@section('title', '404 - Halaman Tidak Ditemukan')
 
 @section('error')
     <div class="text-center py-20">

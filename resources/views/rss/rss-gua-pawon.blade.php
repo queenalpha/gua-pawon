@@ -1,8 +1,8 @@
 @extends ('layouts.app')
-@section('title', 'Berita Gua Pawon') 
-@section('Berita') 
+@section('title', 'Gua Pawon - ' . ucwords(__('news/rss-gua-pawon.berita')))
+@section('Berita')
 
-    <div class="container  mx-auto px-4 py-8">
+    <div class="container  mx-auto px-4 py-15">
         <h1 class="text-3xl font-bold text-center mb-8 mt-10">{{__('news/rss-gua-pawon.berita-gua-pawon')}}</h1>
 
         @if (count($articles) > 0)
