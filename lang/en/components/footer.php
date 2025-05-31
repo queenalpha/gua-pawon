@@ -12,5 +12,7 @@ return [
     'cerita' => 'Stories',
     'penelitian' => 'Research',
     'penelitian-terkait' => 'Related Research',
-    'berita-acara' => 'News'
+    'berita' => 'Related News',
+    'semua-berita' => 'All News',
+    'kontak' => 'Contact'
 ];

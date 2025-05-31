@@ -39,6 +39,7 @@ class ArticleResource extends Resource
                     ->label('Kategori')
                     ->placeholder('Pilih Kategori')
                     ->relationship('category', 'category_name')
+                    // ---untuk bisa tambah kategori lewat aricle page
                     // ->live()
                     // ->createOptionForm([
                     //     TextInput::make('category_name')
@@ -78,9 +79,9 @@ class ArticleResource extends Resource
                     ->fileAttachmentsDisk('public')
                     ->fileAttachmentsDirectory('image-article')
                     ->fileAttachmentsVisibility('public')
+                    ->disableGrammarly()
                     ->required() // Membuat editor lebih besar
                     ->placeholder('Tulis konten disini')
-                    // ->helperText('This is where you can add the content of your article.')
                     ->columnSpan(2), // Lebar lebih besar
             ]);
     }
@@ -99,9 +100,7 @@ class ArticleResource extends Resource
                     ->label('Judul')
                     ->searchable()
                     ->limit(50),
-                // Tables\Columns\TextColumn::make('content'),
                 Tables\Columns\TextColumn::make('category.category_name')->label('Category')->searchable()->sortable()->label('Kategori'),
-                // Tables\Columns\IconColumn::make('is_draft')->boolean()->label('Draft?'),
                 Tables\Columns\TextColumn::make('view_count')->label('Views')->label('Dilihat')->sortable(),
                 Tables\Columns\TextColumn::make('likes')->label('Likes')->label('Disukai')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d M Y')->sortable()->label('Tgl. Dibuat'),

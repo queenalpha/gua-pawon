@@ -6,7 +6,7 @@
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: {{__('pages/history.sejarah-gua')}}</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl" id="sejarah">{{__('pages/history.deskripsi-1')}}
-                <br/> 
+                <br/>
                 {{__('pages/history.deskripsi-2')}}
             </p>
         </div>
@@ -40,7 +40,7 @@
                         <a href="#sejarah" class="flex items-center">{{__('pages/history.sejarah')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#timeline" class="flex items-center">Timeline</a>
+                        <a href="#timeline" class="flex items-center">{{__('pages/history.linimasa')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer" id="timeline">
                         <a href="#keseluruhan" class="flex items-center">{{__('pages/history.keseluruhan')}}</a>
@@ -144,7 +144,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="my-8 grid grid-cols-1 md:grid-cols-2 bg-[#1E1109] text-white font-sans">
         <div class="h-auto md:h-[480px] bg-cover bg-center"
             style="background-image: url('{{Vite::asset('../resources/img/Alatbatu.png')}}')"></div>

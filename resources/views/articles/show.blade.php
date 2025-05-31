@@ -40,7 +40,7 @@
 
             <div class="flex-1 space-y-6 order-1">
                 <div class="prose prose-lg max-w-none text-justify px-4 md:px-0">
-                    {!! $article->content !!}
+                    {!! str($article->content)->sanitizeHtml() !!}
                 </div>
             </div>
         </div>

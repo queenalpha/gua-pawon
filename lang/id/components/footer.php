@@ -12,5 +12,7 @@ return [
     'cerita' => 'Cerita',
     'penelitian' => 'Penelitian',
     'penelitian-terkait' => 'Penelitian Terkait',
-    'berita-acara' => 'Berita Acara'
+    'berita' => 'Berita Terkait',
+    'semua-berita' => 'Semua Berita',
+    'kontak' => 'Kontak',
 ];

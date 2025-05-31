@@ -4,6 +4,7 @@ return [
     'deskripsi-1' => 'Discover the story of prehistoric humans who once lived in Pawon Cave.',
     'deskripsi-2' => 'Explore the history, culture, and archaeological remains.',
     'sejarah-awal' => 'Early History',
+    'linimasa' => "Timeline",
     'paragraf-1' => 'Geologically, Pawon Cave was formed as part of the Rajamandala Formation, a carbonate rock formation from the Late Oligocene to Early Miocene (Mariyanto). This formation underwent sedimentation in a shallow marine environment and developed into an ancient coral reef (Kusumadinata). Over time, dolomitization and the dissolution of meteoric water led to the formation of caves within the limestone, including Pawon Cave (Maryanto).',
     'paragraf-2' => 'The Citatah karst area is known for its many natural caves, formed through long-term geological processes. The geological structure in this region shows fractures and cracks that allow water to penetrate and dissolve the limestone, creating cavities that developed into caves (Maryanto). Several caves around Citatah have historical and archaeological significance, but Pawon Cave is one of the most renowned due to its human remains.',
     'indeks' => 'Index',

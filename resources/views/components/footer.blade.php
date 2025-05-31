@@ -4,41 +4,44 @@
             <div>
                 <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.sejarah')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.sejarah-awal')}}</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.penemuan-gua')}}</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.penemuan-manusia-prasejarah')}}</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.artefak')}}</a></li>
+                    <li class="mb-2"><a href="/history#sejarah" class="hover:underline">{{__('pages/history.sejarah')}}</a></li>
+                    <li class="mb-2"><a href="/history#timeline" class="hover:underline">{{__('pages/history.linimasa')}}</a></li>
+                    <li class="mb-2"><a href="/history#keseluruhan" class="hover:underline">{{__('pages/history.keseluruhan')}}</a></li>
                 </ul>
             </div>
 
             <div>
                 <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.ekologi-geologi')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.flora-fauna')}}</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.cerita-rakyat')}}</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.cerita')}}</a></li>
+                    <li class="mb-2"><a href="/ecology#peta-geologi" class="hover:underline">{{__('pages/ecology.peta-pawon')}}</a></li>
+                    <li class="mb-2"><a href="/ecology#flora" class="hover:underline">Flora</a></li>
+                    <li class="mb-2"><a href="/ecology#fauna" class="hover:underline">Fauna</a></li>
+                    <li class="mb-2"><a href="/ecology#cerita-rakyat" class="hover:underline">{{__('pages/ecology.cerita-rakyat')}}</a></li>
                 </ul>
             </div>
 
             <div>
                 <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.penelitian')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="#" class="hover:underline">{{__('components/footer.penelitian-terkait')}}</a></li>
+                    <li class="mb-2"><a href="/journal" class="hover:underline">{{__('components/footer.penelitian-terkait')}}</a></li>
                 </ul>
             </div>
 
             <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.berita-acara')}}</h2>
+                <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.berita')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="#" class="hover:underline">Berita & Acara</a></li>
-                    <li class="mb-2"><a href="#" class="hover:underline">Form</a></li>
+                    <li class="mb-2"><a href="/news" class="hover:underline" target="_blank">{{__('components/footer.semua-berita')}}</a>
+                    </li>
+                    <li class="mb-2"><a href="/gua-pawon#berita" class="hover:underline">{{__('components/footer.berita')}}</a>
+                    </li>
                 </ul>
             </div>
 
             <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase">Kontak</h2>
+                <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.kontak')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="#" class="hover:underline">Kontak</a></li>
+                    <li class="mb-2"><a href="/gua-pawon#kontak" class="hover:underline">{{__('components/footer.kontak')}}</a>
+                    </li>
                 </ul>
             </div>
         </div>
