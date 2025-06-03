@@ -5,4 +5,5 @@ return [
     'lihat-kumpulan-berita' => 'See a collection of news Gua Pawon',
     'berita-tidak-ditemukan' => 'No news found.',
     'berita-seputar-pawon' => 'News About Gua Pawon',
+    'berita' => 'news'
 ];

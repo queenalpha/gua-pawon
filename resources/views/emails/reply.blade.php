@@ -84,7 +84,7 @@
         <p class="signature">Salam hormat,<br><strong>Admin Gua Pawon</strong></p>
 
         <div class="footer">
-            &copy; {{ date('Y') }} Gua Pawon. Semua hak dilindungi.
+            &copy; {{ date('Y') }} Gua Pawon. All rights reserved.
         </div>
     </div>
 </body>

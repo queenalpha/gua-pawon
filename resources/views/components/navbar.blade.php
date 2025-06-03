@@ -75,7 +75,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>                
+                </li>
 
                 <li>
                     <a href="/gua-pawon#kontak"
@@ -83,10 +83,10 @@
                         {{__('components/navbar.kontak')}}
                     </a>
                 </li>
-                
+
                 <li>
                     <a href="{{ route('articles.index') }}"
-                        class="text-gray-700 block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" target="_blank">{{__('components/navbar.artikel')}}</a>
+                        class="text-gray-700 block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">{{__('components/navbar.artikel')}}</a>
                 </li>
 
                 <li>

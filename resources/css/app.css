@@ -12,3 +12,35 @@
     --font-sans: "New Amsterdam", sans-serif;
     --color-futer-color: #1E1109;
 }
+
+.prose h1 {
+  @apply text-4xl font-bold;
+}
+
+.prose h2 {
+  @apply text-3xl font-semibold;
+}
+
+.prose h3 {
+  @apply text-2xl font-medium;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600;
+}
+
+.prose ul {
+  @apply list-disc pl-5 space-y-1;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 space-y-1;
+}
+
+.prose p {
+  @apply leading-relaxed mb-4;
+}
+
+.prose a {
+  @apply underline text-blue-600 hover:text-blue-800;
+}

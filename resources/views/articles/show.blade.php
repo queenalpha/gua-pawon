@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', $article->title)
+@section('title', ucwords(__('articles/index.artikel')) . " - ". $article->title)
 
 @section('artikel-konten')
         <img src="{{ asset('storage/' . ($article->cover ? $article->cover : 'covers/default/default.jpg')) }}"
@@ -40,7 +40,11 @@
 
             <div class="flex-1 space-y-6 order-1">
                 <div class="prose prose-lg max-w-none text-justify px-4 md:px-0">
-                    {!! $article->content !!}
+                    {!! str($article->content)
+                    ->replaceMatches('/<figcaption[^>]*>.*?<\/figcaption>/is', '') // hapus figcaption
+                    ->replace('<img', '<img style="width: 50%; height: auto; margin: 2rem auto; display: block;"') //ubah lebar menjadi 50%
+                    ->replaceMatches('/<a[^>]*>\s*(<img[^>]+>)\s*<\/a>/i', '$1') // hilanngkan href pada gambar
+                    !!}
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
+@section('title', "Gua Pawon - " . __('pages/journal.penelitian'))
 
-@section('title', 'Jurnal Gua-Pawon')
 @section('jurnal gua-pawon')
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner2.png') }}')">
@@ -56,7 +56,7 @@
                 </div>
             </a>
         @endforeach
-        @if($journals->isEmpty())          
+        @if($journals->isEmpty())
             <div class="text-center text-gray-500 my-15">
                 <p class="text-xl font-semibold">{{__('pages/journal.tidak-ada-data')}}</p>
                 <p class="text-sm">{{__('pages/journal.coba-katakunci-lain')}}</p>

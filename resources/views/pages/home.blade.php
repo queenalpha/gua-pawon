@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Gua Pawon')
+@section('title', 'Gua Pawon - Home')
 
-@section('home')    
+@section('home')
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner1.jpg') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon: {{__('pages/home.warisan-sejarah')}}</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl">
-                {{__('pages/home.desc-judul-1')}} 
+                {{__('pages/home.desc-judul-1')}}
                 <br/>
                 {{__('pages/home.desc-judul-2')}}
             </p>
@@ -116,8 +116,8 @@
         </div>
     </div>
 
-    
-    <div class="max-w-6xl mx-auto px-4 my-10 py-5">
+
+    <div class="max-w-6xl mx-auto px-4 my-10 py-5" id="berita">
         <div class="border-[#D8CC6C] border-l-[5px] pl-5 mb-6">
             <h2 class="text-dark text-2xl font-semibold">
                 {{__('news/rss-gua-pawon.berita-seputar-pawon')}}

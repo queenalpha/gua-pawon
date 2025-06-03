@@ -8,9 +8,9 @@
 
     @vite('resources/css/app.css')
 
-    <title>@yield('title', 'Default Title')</title>
+    <title>@yield('title', 'Gua Pawon')</title>
     <link rel="icon" type="image/png" href="{{ Vite::asset('../resources/img/Logo-pawon.png') }}">
-    @livewireStyles 
+    @livewireStyles
 </head>
 
 <body>

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'judul' => 'Pawon Articles',
+    'judul' => 'Articles',
     'artikel' => 'article',
     'semua' => 'All',
     'arkeologi' => 'Archeology',

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Akses Ditolak')
+@section('title', '403 - Akses Ditolak')
 
 @section('error')
     <div class="text-center py-20">
