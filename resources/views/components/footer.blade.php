@@ -25,6 +25,8 @@
                 <ul class="text-gray-300 font-medium">
                     <li class="mb-2"><a href="/journal" class="hover:underline">{{__('components/footer.penelitian-terkait')}}</a>
                     </li>
+                    <li class="mb-2"><a href="/konservasi-penelitian" class="hover:underline">{{ ucwords(__('pages/conservation.konservasi-penelitian')) }}</a>
+                    </li>
                     <li class="mb-2"><a href="/articles" class="hover:underline">{{ ucwords(__('articles/index.artikel')) }}</a>
                     </li>
                 </ul>
@@ -35,7 +37,7 @@
                 <ul class="text-gray-300 font-medium">
                     <li class="mb-2"><a href="/news" class="hover:underline" target="_blank">{{__('components/footer.semua-berita')}}</a>
                     </li>
-                    <li class="mb-2"><a href="/gua-pawon#berita" class="hover:underline">{{__('components/footer.berita')}}</a>
+                    <li class="mb-2"><a href="/home#berita" class="hover:underline">{{__('components/footer.berita')}}</a>
                     </li>
                 </ul>
             </div>
@@ -43,7 +45,7 @@
             <div>
                 <h2 class="mb-6 text-sm font-semibold uppercase">{{__('components/footer.kontak')}}</h2>
                 <ul class="text-gray-300 font-medium">
-                    <li class="mb-2"><a href="/gua-pawon#kontak" class="hover:underline">{{__('components/footer.kontak')}}</a>
+                    <li class="mb-2"><a href="/home#kontak" class="hover:underline">{{__('components/footer.kontak')}}</a>
                     </li>
                 </ul>
             </div>

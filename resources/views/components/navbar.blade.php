@@ -1,6 +1,6 @@
 <nav class="z-50 border-b bg-white lg:fixed w-full">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/gua-pawon" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="/home" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ Vite::asset('resources/img/Logo-pawon.png') }}" class="h-8" alt="Logo Gua Pawon" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">Gua Pawon</span>
         </a>
@@ -78,7 +78,7 @@
                 </li>
 
                 <li>
-                    <a href="/gua-pawon#kontak"
+                    <a href="/home#kontak"
                         class="text-gray-700 block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
                         {{__('components/navbar.kontak')}}
                     </a>

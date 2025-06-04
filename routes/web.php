@@ -11,8 +11,8 @@ use App\Http\Controllers\ArticleImageUploadController;
 use App\Http\Controllers\conservationController;
 use App\Http\Controllers\journalController;
 
-Route::redirect('/', '/gua-pawon');
-Route::get('/gua-pawon', [HomeController::class, 'index']);
+Route::redirect('/', '/home');
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/history', [historyController::class, 'index']);
 
