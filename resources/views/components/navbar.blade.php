@@ -121,43 +121,43 @@
 
     <div class="mt-10 space-y-6">
         <a href="/" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
-            <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.beranda')}}</span>
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+            <span class="text-lg font-medium ">{{__('components/navbar.beranda')}}</span>
+            <svg class="w-4 h-4 text-gray-600 " fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
         <a href="/history" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
-            <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.sejarah')}}</span>
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+            <span class="text-lg font-medium ">{{__('components/navbar.sejarah')}}</span>
+            <svg class="w-4 h-4 text-gray-600 " fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
         <a href="/ecology" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
-            <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.ekologi-geologi')}}</span>
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+            <span class="text-lg font-medium ">{{__('components/navbar.ekologi-geologi')}}</span>
+            <svg class="w-4 h-4 text-gray-600 " fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
         <a href="/journal" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
-            <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.penelitian')}}</span>
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+            <span class="text-lg font-medium ">{{__('components/navbar.penelitian')}}</span>
+            <svg class="w-4 h-4 text-gray-600 " fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
         <a href="/articles" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
-            <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.artikel')}}</span>
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+            <span class="text-lg font-medium ">{{__('components/navbar.artikel')}}</span>
+            <svg class="w-4 h-4 text-gray-600 " fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
         </a>
-        <a href="/upaya-konservasi" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
-            <span class="text-lg font-medium group-hover:text-blue-700">{{__('components/navbar.upaya-konservasi')}}</span>
-            <svg class="w-4 h-4 text-gray-600 group-hover:text-blue-700" fill="none" stroke="currentColor"
+        <a href="/konservasi-penelitian" class="border-b pb-2 flex justify-between items-center group hover:text-blue-700">
+            <span class="text-lg font-medium ">{{__('components/navbar.konservasi-penelitian')}}</span>
+            <svg class="w-4 h-4 text-gray-600 " fill="none" stroke="currentColor"
                 stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>

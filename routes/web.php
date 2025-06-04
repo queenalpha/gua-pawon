@@ -8,6 +8,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ecologyController;
 use App\Http\Controllers\historyController;
 use App\Http\Controllers\ArticleImageUploadController;
+use App\Http\Controllers\conservationController;
 use App\Http\Controllers\journalController;
 
 Route::redirect('/', '/gua-pawon');
@@ -26,6 +27,7 @@ Route::post('/articles/{id_article}/like', [ArticleController::class, 'like'])->
 Route::get('/journal', [journalController::class, 'index']);
 Route::get('/journal/search', [journalController::class, 'search'])->name('journals.search');
 
+Route::get('/konservasi-penelitian', [conservationController::class, 'index']);
 
 
 Route::post('/upload-image', [ArticleImageUploadController::class, 'uploadImage']);
