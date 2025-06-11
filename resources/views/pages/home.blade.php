@@ -66,7 +66,7 @@
             <img src="{{ Vite::asset('resources/img/image 12.png') }}" alt="Konservasi"
                 class="w-full h-48 object-cover" />
             <a href="#" class="bg-[#2A1B0F] text-white flex justify-between px-4 py-2 hover:bg-[#3a2919] transition">
-                <span>{{__('components/navbar.upaya-konservasi')}}</span> <span>→</span>
+                <span>{{__('components/navbar.konservasi-penelitian')}}</span> <span>→</span>
             </a>
         </div>
         <div class="overflow-hidden rounded shadow-lg">
