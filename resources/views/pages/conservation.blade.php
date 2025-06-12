@@ -6,7 +6,8 @@
         style="background-image: url('{{ Vite::asset('../resources/img/banner2.png') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-4xl">Gua Pawon:
-                {{__('pages/conservation.nilai-penting')}}</h1>
+                {{__('pages/conservation.nilai-penting')}}
+            </h1>
             <p class="mb-8 lg:text-lg font-normal text-gray-300 lg:text-2xl" id="peta-geologi">
                 {{__('pages/conservation.temukan-kisah')}}
             </p>
@@ -38,18 +39,22 @@
                 </h3>
                 <ul class="space-y-3 text-black px-3">
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Nilai-nilai-penting-Gua-pawon" class="flex items-center">{{__('pages/conservation.nilai-nilai-penting')}}</a>
+                        <a href="#Nilai-nilai-penting-Gua-pawon"
+                            class="flex items-center">{{__('pages/conservation.nilai-nilai-penting')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer">
-                        <a href="#Nilai-Penting-Pengetahuan-Arkeologi" class="flex items-center">{{__('pages/conservation.nilai-penting-arkeologi')}}</a>
+                        <a href="#Nilai-Penting-Pengetahuan-Arkeologi"
+                            class="flex items-center">{{__('pages/conservation.nilai-penting-arkeologi')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer"
                         id="timeline">
-                        <a href="#Nilai-Penting-Pengembangan-Teknik-dan-Metodologi-Penelitian" class="flex items-center">{{__('pages/conservation.teknik-dan-metodologi')}}</a>
+                        <a href="#Nilai-Penting-Pengembangan-Teknik-dan-Metodologi-Penelitian"
+                            class="flex items-center">{{__('pages/conservation.teknik-dan-metodologi')}}</a>
                     </li>
                     <li class="border-b border-gray-300 pb-2 hover:text-gray-300 transition-colors cursor-pointer"
                         id="timeline">
-                        <a href="#Pemanfaatan-Hasil-Penulisan-Karya-Ilmiah" class="flex items-center">{{__('pages/conservation.pemanfaatan-hasil')}}</a>
+                        <a href="#Pemanfaatan-Hasil-Penulisan-Karya-Ilmiah"
+                            class="flex items-center">{{__('pages/conservation.pemanfaatan-hasil')}}</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +70,8 @@
                 {{__('pages/conservation.nilai-penting-pengetahuan-arkeologi')}}
             </h2>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 items-stretch mb-20" id="Nilai-Penting-Pengetahuan-Arkeologi">
+        <div class="grid grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 items-stretch mb-20"
+            id="Nilai-Penting-Pengetahuan-Arkeologi">
             <div class="order-3 lg:order-2 lg:col-span-1 space-y-4 flex flex-col justify-center">
                 <p class="text-gray-700 lg:text-lg text-justify">
                     {{__('pages/conservation.temuan-rangka-manusia')}}
@@ -80,7 +86,7 @@
 
             <div class="order-1 lg:order-3 lg:col-span-1 h-full">
                 <div class="h-full overflow-hidden rounded-2xl shadow-lg">
-                    <img src="{{ Vite::asset('resources/img/konservasi-pawon.jpg') }}" alt="konservasi-pawon"
+                    <img src="{{ Vite::asset('resources/img/image 92.png') }}" alt="konservasi-pawon"
                         class="w-full h-full object-cover" />
                 </div>
             </div>
@@ -92,10 +98,11 @@
                 {{__('pages/conservation.teknik-dan-metodologi')}}
             </h2>
         </div>
-        <div class="grid grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 items-stretch mb-20" id="Nilai-Penting-Pengembangan-Teknik-dan-Metodologi-Penelitian">
+        <div class="grid grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 items-stretch mb-20"
+            id="Nilai-Penting-Pengembangan-Teknik-dan-Metodologi-Penelitian">
             <div class="order-1 lg:order-1 lg:col-span-1 h-full flex flex-col justify-center">
                 <div class="h-full overflow-hidden rounded-2xl shadow-lg">
-                    <img src="{{ Vite::asset('resources/img/konservasi-pawon.jpg') }}" alt="konservasi-pawon"
+                    <img src="{{ Vite::asset('resources/img/nilaipengetahuan.png') }}" alt="konservasi-pawon"
                         class="w-full h-full object-cover" />
                 </div>
             </div>
