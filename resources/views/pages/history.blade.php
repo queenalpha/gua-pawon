@@ -86,7 +86,7 @@
 
                 <div class="mb-20 flex flex-col md:flex-row items-center w-full relative z-10">
                     <div class="md:w-1/2 md:pr-8 order-1">
-                        <img src="{{Vite::asset('../resources/img/2000s.jpg')}}"
+                        <img src="{{Vite::asset('../resources/img/2000.jpg')}}"
                             class="rounded shadow-md w-full h-[200px] object-cover" />
                     </div>
                     <div class="md:w-1/2 md:pl-8 md:mt-0 order-2">
@@ -105,7 +105,7 @@
                         </p>
                     </div>
                     <div class="md:w-1/2 md:pl-8 md:mt-0 order-1 md:order-2">
-                        <img src="{{Vite::asset('../resources/img/2004.jpeg')}}"
+                        <img src="{{Vite::asset('../resources/img/s2000.jpg')}}"
                             class="rounded shadow-md w-full h-[200px] object-cover" />
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                         </p>
                     </div>
                     <div class="md:w-1/2 md:pl-8 md:mt-0 order-1 md:order-2">
-                        <img src="{{Vite::asset('../resources/img/s2005.jpg')}}"
+                        <img src="{{Vite::asset('../resources/img/2005.jpg')}}"
                             class="rounded shadow-md w-full h-[200px] object-cover" />
                     </div>
                 </div>
@@ -160,7 +160,7 @@
             <div class="hidden duration-700 ease-in-out grid grid-cols-1 md:grid-cols-2 bg-[#1E1109] text-white font-sans"
                 data-carousel-item="active">
                 <div class="h-auto md:h-[480px] bg-cover bg-center"
-                    style="background-image: url('{{ Vite::asset('../resources/img/Alat-batu.png') }}')">
+                    style="background-image: url('{{ Vite::asset('../resources/img/alat-batu.jpg') }}')">
                 </div>
                 <div class="p-6 md:p-10 flex flex-col justify-between">
                     <div>
