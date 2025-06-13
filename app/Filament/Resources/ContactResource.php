@@ -46,9 +46,10 @@ class ContactResource extends Resource
                 Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('telp')->label('No. Telp')->searchable(),
                 Tables\Columns\TextColumn::make('subject')
-                    ->label('Subject'),
+                    ->label('Subject')->searchable(),
                 Tables\Columns\TextColumn::make('messages')
                     ->label('Pertanyaan')
+                    ->searchable()
                     ->limit(50),
                 Tables\Columns\TextColumn::make('reply')
                     ->label('Jawaban Balasan')
