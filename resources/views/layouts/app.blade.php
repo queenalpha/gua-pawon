@@ -24,7 +24,7 @@
     @yield('jurnal gua-pawon')
     @yield('artikel')
     @yield('artikel-konten')
-    @yield('conservation')
+    @yield('konservasi-penelitian')
 
     @livewireScripts
 </body>

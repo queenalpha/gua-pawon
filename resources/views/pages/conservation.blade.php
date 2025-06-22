@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', "Gua Pawon - " . __('pages/conservation.conservation'))
 
-@section('conservation')
+@section('konservasi-penelitian')
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner2.png') }}')">
         <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
