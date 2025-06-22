@@ -4,7 +4,7 @@
 @section('home')
     <section class="bg-center bg-no-repeat bg-gray-300 bg-blend-multiply bg-cover h-[70vh] md:h-[80vh] lg:h-[70vh]"
         style="background-image: url('{{ Vite::asset('../resources/img/banner1.jpg') }}')">
-        <div class="px-4 max-w-screen-xl text-left py-24 lg:py-50 lg:mx-10 xl:py-70">
+        <div class="px-4 max-w-screen-xl text-left py-50 lg:py-50 lg:mx-10 xl:py-70">
             <h1 class="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-3xl">Gua Pawon:
                 {{__('pages/home.warisan-sejarah')}}
             </h1>

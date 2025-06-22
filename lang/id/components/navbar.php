@@ -9,5 +9,5 @@ return [
     'sejarah' => 'Sejarah',
     'ekologi-geologi' => 'Ekologi dan Geologi',
     'penelitian' => 'Penelitian',
-    'konservasi-penelitian' => 'Nilai dan Pemanfaatan'
+    'conservation' => 'Nilai dan Pemanfaatan'
 ];

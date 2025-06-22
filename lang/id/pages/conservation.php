@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'konservasi-penelitian' => 'Konservasi Penelitian',
+    'conservation' => 'Konservasi Penelitian',
     'nilai-penting' => 'Nilai penting dan Pemanfaatan',
     'nilai-nilai-penting' => 'Nilai-Nilai Penting Gua Pawon',
     'temukan-kisah' => 'Temukan kisah manusia purba yang pernah hidup di Gua Pawon. Jelajahi sejarah, budaya, dan

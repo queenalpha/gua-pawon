@@ -25,7 +25,7 @@
                 <ul class="text-gray-300 font-medium">
                     <li class="mb-2"><a href="/journal" class="hover:underline">{{__('components/footer.penelitian-terkait')}}</a>
                     </li>
-                    <li class="mb-2"><a href="/konservasi-penelitian" class="hover:underline">{{ ucwords(__('pages/conservation.konservasi-penelitian')) }}</a>
+                    <li class="mb-2"><a href="/conservation" class="hover:underline">{{ ucwords(__('pages/conservation.conservation')) }}</a>
                     </li>
                     <li class="mb-2"><a href="/articles" class="hover:underline">{{ ucwords(__('articles/index.artikel')) }}</a>
                     </li>
@@ -55,7 +55,7 @@
 
         <div class="px-4 py-6 md:flex md:items-center md:justify-center bg-[#1e1109]">
             <span class="text-sm text-gray-300 text-center">© 2025 <strong>PHASE™</strong> | Balai Pelestarian Jawa
-                Barat Wilayah IX | Intitut Teknologi Nasional Bandung</span>
+                Barat Wilayah IX | Institut Teknologi Nasional Bandung</span>
         </div>
     </div>
 </footer>

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'konservasi-penelitian' => 'Research Conservation',
+    'conservation' => 'Research Conservation',
     'nilai-penting' => 'Significance and Utilization',
     'nilai-nilai-penting' => 'Significant Values of Pawon Cave',
     'temukan-kisah' => 'Discover the story of prehistoric humans who once lived in Pawon Cave. Explore history, culture, and archaeological remains in a single educational platform.',

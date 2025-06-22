@@ -27,7 +27,7 @@ Route::post('/articles/{id_article}/like', [ArticleController::class, 'like'])->
 Route::get('/journal', [journalController::class, 'index']);
 Route::get('/journal/search', [journalController::class, 'search'])->name('journals.search');
 
-Route::get('/konservasi-penelitian', [conservationController::class, 'index']);
+Route::get('/conservation', [conservationController::class, 'index']);
 
 
 Route::post('/upload-image', [ArticleImageUploadController::class, 'uploadImage']);

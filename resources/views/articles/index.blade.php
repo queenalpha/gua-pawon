@@ -2,7 +2,7 @@
 @section('title', "Gua Pawon - " . __('articles/index.judul'))
 
 @section('artikel')
-    <div class="max-w-6xl mx-auto px-4 pt-12">
+    <div class="max-w-6xl mx-auto px-4 lg:pt-12">
         <div class="text-center mt-10">
             <span class="font-extrabold text-3xl tracking-wide">PAWON</span>
             <span class="font-light text-2xl ml-1">{{__('articles/index.artikel')}}</span>
@@ -14,22 +14,21 @@
         <div class="relative h-64 overflow-hidden sm:h-80 md:h-96">
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    class="absolute block max-w-full max-h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    class="absolute w-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                     alt="...">
             </div>
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="https://images.unsplash.com/photo-1459356067573-0a190eb1fcf5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    class="absolute block max-w-full max-h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    class="absolute w-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                     alt="...">
             </div>
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="https://images.unsplash.com/photo-1521106581851-da5b6457f674?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    class="absolute block max-w-full max-h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    class="absolute w-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                     alt="...">
             </div>
         </div>
 
-        <!-- Tombol prev -->
         <button type="button"
             class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-2 sm:px-4 cursor-pointer group focus:outline-none"
             data-carousel-prev>
@@ -44,7 +43,6 @@
             </span>
         </button>
 
-        <!-- Tombol next -->
         <button type="button"
             class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-2 sm:px-4 cursor-pointer group focus:outline-none"
             data-carousel-next>
@@ -63,7 +61,7 @@
 
     <div class="flex justify-center mt-8">
         <div class="w-full max-w-6xl">
-            <div class="text-xs lg:text-base  font-bold text-center text-gray-500">
+            <div class="text-base  font-bold text-center text-gray-500">
                 <ul class="flex flex-wrap -mb-px justify-center" id="tabs">
                     <li class="me-2">
                         <button onclick="showTab('semua')"
